@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" font-family="Helvetica,Arial,sans-serif">
+<rect width="1100" height="620" fill="#fff"/>
+<text x="20" y="30" font-size="18" font-weight="bold">REV B four-layer stackup (JLCPCB JLC04161H-7628, 1.6 mm) - thickness to scale x260 for dielectrics, copper exaggerated</text>
+<rect x="20" y="60.0" width="380" height="10.0" fill="#2e7d32" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="69.0" font-size="12">Solder mask (top)  [assumed ~10-20 um]</text>
+<rect x="20" y="72.0" width="380" height="10.0" fill="#c77c02" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="81.0" font-size="12">L1 Cu 1 oz 0.035 mm: components, RF (50 ohm CPWG/microstrip), critical signals, GND pour  [JLC04161H-7628]</text>
+<rect x="20" y="84.0" width="380" height="54.7" fill="#d9c58a" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="115.4" font-size="12">Prepreg 7628, 0.2104 mm, er 4.4  [JLC04161H-7628]</text>
+<rect x="20" y="140.7" width="380" height="10.0" fill="#c77c02" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="149.7" font-size="12">L2 Cu 0.5 oz 0.0152 mm: continuous GND (only cut: NFC coil window)  [JLC04161H-7628]</text>
+<rect x="20" y="152.7" width="380" height="276.9" fill="#e8dcb0" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="295.2" font-size="12">Core FR-4, 1.065 mm, er 4.6  [JLC04161H-7628]</text>
+<rect x="20" y="431.6" width="380" height="10.0" fill="#c77c02" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="440.6" font-size="12">L3 Cu 0.5 oz 0.0152 mm: power (VSYS, 3V6, 3V3, 3V3_RF) + secondary signals, GND fill elsewhere  [JLC04161H-7628]</text>
+<rect x="20" y="443.6" width="380" height="54.7" fill="#d9c58a" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="475.0" font-size="12">Prepreg 7628, 0.2104 mm, er 4.4  [JLC04161H-7628]</text>
+<rect x="20" y="500.3" width="380" height="10.0" fill="#c77c02" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="509.3" font-size="12">L4 Cu 1 oz 0.035 mm: digital/aux signals, bottom parts, GND fill  [JLC04161H-7628]</text>
+<rect x="20" y="512.3" width="380" height="10.0" fill="#2e7d32" stroke="#333" stroke-width="0.5"/>
+<text x="415" y="521.3" font-size="12">Solder mask (bottom)  [assumed]</text>
+<text x="20" y="554.308" font-size="12">50 ohm on L1 referenced to L2 (h = 0.2104 mm): 2D FD quasi-static solve -> microstrip w = 0.36 mm: 50.3 ohm (no mask), 49.3 ohm (20 um mask);</text>
+<text x="20" y="574.308" font-size="12">CPWG w = 0.30 mm, gap 0.15 mm: 49.3 ohm. Hammerstad closed form gives 53.6 ohm for w = 0.36 (no thickness correction). Solver check: 123.1 vs 126.6 ohm reference (-2.8 %).</text>
+<text x="20" y="594.308" font-size="12">Final widths must be confirmed with JLCPCB's impedance calculator / controlled-impedance order; dielectric constants are the stackup file values, not measured.</text>
+<text x="20" y="614.308" font-size="12">USB D+/D-: 90 ohm differential on L1 over L2 (Espressif guideline), geometry to be solved at layout stage; ESP32-C3 USB is full speed (12 Mbit/s).</text>
+</svg>

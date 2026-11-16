@@ -1,0 +1,1 @@
+Symbols: stock KiCad 10 libraries plus `../NH_LOCAL.kicad_sym` (SN74LVC1G08, TPS22918). Footprints: stock KiCad 10 footprint libraries only (no custom footprints). 3D models: KiCad stock models, resolved from the KiCad installation at render time.

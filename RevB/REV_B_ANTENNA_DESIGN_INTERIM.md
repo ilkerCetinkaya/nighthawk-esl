@@ -1,0 +1,26 @@
+# REV B antenna design: INTERIM findings (incomplete, not validated)
+
+Date: 2026-11-08. Research stopped early (usage limit). Nothing here is measured or validated. No RF routing, no Gerbers. Labels: [DS] document read, [CALC], [U] unknown.
+
+## 1. ESP32-C3-WROOM-02 keepout (Espressif)
+Sources: ESP32-C3-WROOM-02 datasheet v1.7 fig. 11-1 (https://documentation.espressif.com/esp32-c3-wroom-02_datasheet_en.pdf); ESP32-C3 Hardware Design Guidelines, PCB layout (https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32c3/pcb-layout-design.html), figure "Keepout Zone" read.
+- Module 18 x 20 mm, antenna area 18 x 6 mm at the module end, first pad row 7.1 mm from the tip [DS].
+- Clearance area: base board cut away to the antenna base line over module width + 15 mm each side; at least 15 mm clear outward; feed point near the board edge; dense ground vias near the antenna on the base board; 15 mm clear in all directions inside the housing; antenna must be validated by test [DS].
+- **Current placement differs:** notch is y 17-50 (13 mm below the module side, needs 15 mm: change bottom to y about 15.5), notch edge x 6.2 should equal the antenna base (6.0 from the tip), module tip at x 0.4. The housing needs 15 mm of free space beyond the top edge: enclosure requirement, unverified.
+
+## 2. CC1352R 2.4 GHz IFA (TI AN043 / SWRA117D)
+Source: https://www.ti.com/lit/an/swra117d/swra117d.pdf (figure 3, table 1). Overall 15.2 x 5.7 mm, VSWR < 2 over the band, no matching needed on the reference board; TI says copy exactly and compensate for PCB thickness by antenna length; the reference PCB thickness/material is in a readme that was **not obtained [U]**. Alternative TI document SWRU120D (25.7 x 7.5 mm, 1 mm FR-4, +3.3 dBi, recommends a pi network) does not fit the corner.
+Dimensions (table 1): L1 3.94, L2 2.70, L3 5.00, L4 2.64, L5 2.00, L6 4.90, W1 0.90, W2 0.50, D1 0.50, D2 0.30, D3 0.30, D4 0.50, D5 1.40, D6 1.70 mm. Reconstruction from the figure (checked by sums: 0.9+1.4+0.5+1.7+0.5 = 5.0 = L3; 0.5+14.4+0.3 = 15.2; 0.3+0.5+4.9 = 5.7): left short stub 0.9 wide with a via to ground at its foot, feed stub 0.5 wide 1.4 mm from it, top bar 5.0 long, then a meander (legs 2.64, gaps 2.0, top bars 2.7) ending in a free leg 3.94 long. Ground exists only on layer 2, its edge 0.5 mm above the stub feet.
+For our 4-layer board: copper-free on all layers over the antenna (L2 ground edge 0.5 mm above the box bottom), pi network (shunt-series-shunt, 0402, DNP except a 0 ohm series) at the feed, U.FL via 0 ohm select (already in the schematic; a second shunt pad at the antenna side is still to be added). Feed line 50 ohm: earlier 2D solver 0.36 mm on the 0.2104 mm prepreg (50.3 ohm) [CALC]; JLCPCB's own impedance value not checked [U].
+
+## 3. 868 MHz chip antenna (Johanson 0868AT43A0020, datasheet v1.8)
+Layout figures read (pages 2-3): antenna 7 x 2 mm; reference corner placements on a 26 x 42 mm ground with a 10 x 11 mm (or 11 x 10 mm, +3 mm) region that is **ground-free and metal-free on all layers above and below**; 50 ohm feed line; meander 7.1 x 5.1 mm, 0.5 mm trace, 3.0 mm leg, 5.1 mm run; overall 8.0 mm incl. 1.0 mm pads; pi slots required; matching 18 nH series, 3.9 pF and 0.3 pF shunt are values for Johanson's own board only. Edge placement is **not** a documented configuration; only corners and the end of a board.
+**Conflict:** the documented corner zone (10 x 11 mm) cannot be met at the top-right corner with the present 21.5 mm RF shield can (the zone overlaps the can). The current right-edge placement is undocumented. Options for review: (a) smaller RF can, (b) move the 868 antenna to a corner at the cost of the USB position, (c) accept the edge placement and measure.
+
+## 4. NFC coil (TI SLOA241C, https://www.ti.com/lit/an/sloa241/sloa241.pdf)
+- Target coil inductance 1 to 1.5 uH (the present 28 x 16 mm 3-turn estimate of 0.38 uH is too low; more turns needed); coil Q 7-10 for ISO14443A/B and FeliCa; coil trace gap 0.1 mm or less.
+- **Metal spacing: TI recommends 10 mm** between the coil and metal (side by side or stacked) and about 10 mm from PCB ground planes; metal damps and detunes the coil. Our coil is 1.2 mm from the NFC can, 3.3 mm from the RF can and about 1.6 mm from the ESP32 shield: far below the guidance. A ferrite sheet is TI's mitigation; the coil must be measured and tuned with the cans fitted. A 10 mm clearance is not achievable with two 21.5 mm cans on 80 x 50 mm without re-placement (for example, an NFC coil of about 18 mm width and the RF can 10 mm from it) or removing the NFC can. Quantifying the damping needs EM simulation or measurement [U].
+- TI matching: 3 elements (Cp, Rp, Cs), two pads each for Cp and Cs, U.FL pads between the 50 ohm point and the coil, a 0 ohm isolation resistor, 1 % parts. Example for 1.35 uH: Cp 47 pF, Rp 700 ohm, Cs 68 pF. The present schematic values (C24 330 pF for 0.38 uH) must be redone when the coil is redesigned. Inductance equation (SLOA241C eq. 2) was found; the coil calculation itself was not run.
+
+## 5. Not done
+Coexistence analysis (ESP32 vs CC1352R 2.4 GHz), antenna-to-antenna and USB/battery/regulator proximity analysis, updated antenna keepout drawings, matching BOM, RF risk register, VNA/chamber validation list, JLCPCB 50 ohm check, schematic pi-network addition.

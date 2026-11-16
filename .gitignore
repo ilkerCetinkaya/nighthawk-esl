@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+*.jar
+*.kicad_prl
+*-backups/
+fp-info-cache
+RevB/ai_routing/sandbox/
+RevB/ai_routing/kicad_cfg/
+RevB/ai_routing/results/*.log
+RevB/pcb/work_route/

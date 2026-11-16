@@ -1,0 +1,10 @@
+| Block | Block area mm^2 | Sum of courtyards mm^2 | Utilisation |
+|---|---|---|---|
+| USB_ESD | 42 | 23 | 54 % |
+| CHG | 64 | 39 | 62 % |
+| REG | 144 | 75 | 52 % |
+| NFC_IC | 150 | 107 | 72 % |
+| DIG1 | 294 | 179 | 61 % |
+| DIG2 | 301 | 159 | 53 % |
+| STOR | 96 | 64 | 67 % |
+| UI | 204 | 117 | 58 % |

@@ -1,0 +1,37 @@
+SRF = 1/(2 pi sqrt(L C)) with assumed ESL; effective C = C/(1-(f/SRF)^2); |X| at f  [CALC, ESL is an assumption, Murata/Samsung data not read]
+C34/C35/C59 100 pF (IPC C41/C51, NFC C21)
+   ESL 0.3 nH (0402 part+pads (low)): SRF 919 MHz | 868 MHz: f/SRF 0.94, Ceff 928.7 pF, X -0.20 ohm | 2440 MHz: f/SRF 2.66, Ceff inf pF, X +3.95 ohm | 14 MHz: f/SRF 0.01, Ceff 100.0 pF, X -117.35 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 796 MHz | 868 MHz: f/SRF 1.09, Ceff inf pF, X +0.35 ohm | 2440 MHz: f/SRF 3.07, Ceff inf pF, X +5.48 ohm | 14 MHz: f/SRF 0.02, Ceff 100.0 pF, X -117.34 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 650 MHz | 868 MHz: f/SRF 1.34, Ceff inf pF, X +1.44 ohm | 2440 MHz: f/SRF 3.76, Ceff inf pF, X +8.55 ohm | 14 MHz: f/SRF 0.02, Ceff 100.0 pF, X -117.32 ohm
+C57 220 pF NFC
+   ESL 0.3 nH (0402 part+pads (low)): SRF 620 MHz | 14 MHz: f/SRF 0.02, Ceff 220.1 pF, X -53.32 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 537 MHz | 14 MHz: f/SRF 0.03, Ceff 220.1 pF, X -53.32 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 438 MHz | 14 MHz: f/SRF 0.03, Ceff 220.2 pF, X -53.30 ohm
+C63 330 pF NFC tank
+   ESL 0.3 nH (0402 part+pads (low)): SRF 506 MHz | 14 MHz: f/SRF 0.03, Ceff 330.2 pF, X -35.54 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 438 MHz | 14 MHz: f/SRF 0.03, Ceff 330.3 pF, X -35.53 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 358 MHz | 14 MHz: f/SRF 0.04, Ceff 330.5 pF, X -35.52 ohm
+C55/C58 680 pF NFC
+   ESL 0.3 nH (0402 part+pads (low)): SRF 352 MHz | 14 MHz: f/SRF 0.04, Ceff 681.0 pF, X -17.23 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 305 MHz | 14 MHz: f/SRF 0.04, Ceff 681.3 pF, X -17.23 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 249 MHz | 14 MHz: f/SRF 0.05, Ceff 682.0 pF, X -17.21 ohm
+C53/C54 1.2 nF NFC
+   ESL 0.3 nH (0402 part+pads (low)): SRF 265 MHz | 14 MHz: f/SRF 0.05, Ceff 1203.1 pF, X -9.76 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 230 MHz | 14 MHz: f/SRF 0.06, Ceff 1204.2 pF, X -9.75 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 188 MHz | 14 MHz: f/SRF 0.07, Ceff 1206.3 pF, X -9.73 ohm
+C51/C52 1.5 nF NFC series
+   ESL 0.3 nH (0402 part+pads (low)): SRF 237 MHz | 14 MHz: f/SRF 0.06, Ceff 1504.9 pF, X -7.80 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 205 MHz | 14 MHz: f/SRF 0.07, Ceff 1506.6 pF, X -7.79 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 168 MHz | 14 MHz: f/SRF 0.08, Ceff 1509.9 pF, X -7.77 ohm
+C69 1.5 pF TIA
+   ESL 0.3 nH (0402 part+pads (low)): SRF 7503 MHz | 11 MHz: f/SRF 0.00, Ceff 1.5 pF, X -10009.72 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 6497 MHz | 11 MHz: f/SRF 0.00, Ceff 1.5 pF, X -10009.72 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 5305 MHz | 11 MHz: f/SRF 0.00, Ceff 1.5 pF, X -10009.70 ohm
+C37 3.9 pF 868 MHz match
+   ESL 0.3 nH (0402 part+pads (low)): SRF 4653 MHz | 868 MHz: f/SRF 0.19, Ceff 4.0 pF, X -45.38 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 4030 MHz | 868 MHz: f/SRF 0.22, Ceff 4.1 pF, X -44.83 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 3290 MHz | 868 MHz: f/SRF 0.26, Ceff 4.2 pF, X -43.74 ohm
+C38 0.3 pF 868 MHz match
+   ESL 0.3 nH (0402 part+pads (low)): SRF 16776 MHz | 868 MHz: f/SRF 0.05, Ceff 0.3 pF, X -609.56 ohm
+   ESL 0.4 nH (0402 part+pads (typical)): SRF 14529 MHz | 868 MHz: f/SRF 0.06, Ceff 0.3 pF, X -609.01 ohm
+   ESL 0.6 nH (0402 part+pads (high)): SRF 11863 MHz | 868 MHz: f/SRF 0.07, Ceff 0.3 pF, X -607.92 ohm

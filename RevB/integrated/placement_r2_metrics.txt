@@ -1,0 +1,12 @@
+Placement R2 metrics (mm, rectangle edge to edge, from placement_b.json; shield outer 21.5 incl. frame pads)
+NFC coil to ESP32 module edge: 9.8 (TI recommends 10)
+NFC coil to RF shield can: 10.0 (TI recommends 10)
+NFC coil to USB-C: 24.8 ; battery connector: 18.7 ; JTAG header J5: 7.8
+NFC coil to 2.4 GHz IFA box: 16.7 ; to 868 zone: 31.0
+868 zone to RF can: 4.2 ; to USB-C: 6.6 ; to U.FL sub: 1.3
+IFA box to RF can: 7.5 ; to U.FL 2.4: 1.2 ; to coil: 16.7
+IFA box to 868 zone: 33.3
+ESP32 antenna cut-out to IFA: 58.8 ; to 868 zone: 64.2
+switching regulator parts to RF can 38.0, NFC region 16.9, IR receiver/parts 24.2, coil 26.1
+USB-C to ESP32 module: 38.7
+battery connector to cable keepout: 0.1

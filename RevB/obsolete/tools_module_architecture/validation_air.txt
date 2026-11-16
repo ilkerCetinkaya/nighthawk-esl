@@ -1,0 +1,3 @@
+validation: air microstrip w/h=1, t=0.02h, box 24x12 h, grid 0.04 h: FD Z0 123.1 ohm
+validation: air microstrip w/h=1, t=0.02h, box 24x12 h, grid 0.02 h: FD Z0 123.1 ohm
+reference (Hammerstad, t->0): 126.6 ohm

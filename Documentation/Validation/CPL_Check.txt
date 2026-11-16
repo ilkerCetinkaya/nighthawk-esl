@@ -1,0 +1,4 @@
+CPL rows: 87; coordinate mismatches vs re-read PCB: 0; bottom-layer parts: []
+Rotations are exported from KiCad as placed. JLCPCB package-specific rotation offsets were NOT applied or checked; verify in the JLCPCB viewer before ordering.
+Excluded: DNP parts, test points, mounting holes.
+RESULT: PASS (coordinates)

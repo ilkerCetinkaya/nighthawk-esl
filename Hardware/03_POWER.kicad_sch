@@ -1,0 +1,1085 @@
+(kicad_sch
+	(version 20260206)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "c8e10665-df38-5383-9f1c-c5ca30923c64")
+	(paper "A2")
+	(title_block
+		(title "NIGHTHAWK 03_POWER")
+		(date "2026-11-07")
+		(rev "A")
+		(comment 1 "NIGHTHAWK ESL SECURITY RESEARCH")
+		(comment 2 "Generated from Hardware/build/design.py")
+	)
+	(lib_symbols
+		(symbol "Regulator_Linear:TLV75533PDBV"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -3.81 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV75533PDBV"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "500mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LDO Regulator Fixed Positive"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV75533PDBV_0_1"
+				(rectangle
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV75533PDBV_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:FerriteBead"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "FB"
+				(at -3.81 0.635 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FerriteBead"
+				(at 3.81 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ferrite bead"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "L ferrite bead inductor filter"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FerriteBead_0_1"
+				(polyline
+					(pts
+						(xy -2.7686 0.4064)
+						(xy -1.7018 2.2606)
+						(xy 2.7686 -0.3048)
+						(xy 1.6764 -2.159)
+						(xy -2.7686 0.4064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27)
+						(xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27)
+						(xy 0 -1.2192)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FerriteBead_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 1.27)
+						(xy -1.016 1.905)
+						(xy 0 2.54)
+						(xy 1.016 1.905)
+						(xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+(symbol
+	(lib_id "Regulator_Linear:TLV75533PDBV")
+	(at 52.07 62.23 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "04b14439-f7c2-53d6-b77f-1b49025c5540")
+	(property "Reference" "U3" (at 52.07 67.77 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TLV75533PDBVR" (at 52.07 69.37 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 52.07 70.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C404027.html" (at 52.07 72.57 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C404027" (at 52.07 74.17 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "TLV75533PDBVR" (at 52.07 75.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Texas Instruments" (at 52.07 77.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "addd9b38-8dc3-5e55-a281-58bb0d45fa7a"))
+	(pin "2" (uuid "7feb2628-5907-5a47-8c9f-cfd9db44ba68"))
+	(pin "3" (uuid "87b86d36-9421-5aa3-847f-f8ea771de584"))
+	(pin "4" (uuid "19770f51-7130-520c-9b2e-7062e493dd00"))
+	(pin "5" (uuid "d8f3535b-26ab-5447-a4ad-ca7adc3a029a"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "U3") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 100.33 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "c8db12a2-22c4-52b5-868c-8f54b1af0b54")
+	(property "Reference" "C7" (at 100.33 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10u" (at 100.33 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 100.33 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19702.html" (at 100.33 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19702" (at 100.33 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CL10A106KP8NNNC" (at 100.33 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Samsung Electro-Mechanics" (at 100.33 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "fb27f31e-df1f-5fac-b727-0f6f17727d58"))
+	(pin "2" (uuid "8a32cff4-740b-576c-b1f7-d7ba3aa51ae9"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "C7") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 139.70 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "cb8b09fb-74d6-5f3d-bbe9-214d2c31feac")
+	(property "Reference" "C8" (at 139.70 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10u" (at 139.70 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 139.70 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19702.html" (at 139.70 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19702" (at 139.70 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CL10A106KP8NNNC" (at 139.70 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Samsung Electro-Mechanics" (at 139.70 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "1125a4a8-0042-5e45-afba-4ba1e5f6d9b8"))
+	(pin "2" (uuid "6d1790d9-887a-5ef8-a047-32656e31a6ea"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "C8") (unit 1))))
+)
+(symbol
+	(lib_id "Regulator_Linear:TLV75533PDBV")
+	(at 187.96 62.23 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "c92e1f9c-99dd-5f73-8532-14183d7f5dda")
+	(property "Reference" "U4" (at 187.96 67.77 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TLV75533PDBVR" (at 187.96 69.37 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 187.96 70.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C404027.html" (at 187.96 72.57 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C404027" (at 187.96 74.17 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "TLV75533PDBVR" (at 187.96 75.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Texas Instruments" (at 187.96 77.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "968b334c-3b1c-5465-8650-52a300cea350"))
+	(pin "2" (uuid "70b7d5d9-b804-56f9-acb9-80c00638d820"))
+	(pin "3" (uuid "5c9268fc-8eb3-55b6-b07b-8f4d7f111566"))
+	(pin "4" (uuid "eea60d4b-8240-5f1a-b39f-8498c90b5140"))
+	(pin "5" (uuid "8c393c51-00ce-5118-ac76-935ae2e84a38"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "U4") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 234.95 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "436b32f1-39d1-5230-8536-c804682440bd")
+	(property "Reference" "C9" (at 234.95 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10u" (at 234.95 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 234.95 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19702.html" (at 234.95 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19702" (at 234.95 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CL10A106KP8NNNC" (at 234.95 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Samsung Electro-Mechanics" (at 234.95 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "ff35d054-e577-5ceb-8132-3977f9683baf"))
+	(pin "2" (uuid "12d415a7-bc40-5989-a242-18d74da9a4f1"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "C9") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 275.59 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "92cba02e-53d5-52e7-a3ad-8cf1a1eb797c")
+	(property "Reference" "C10" (at 275.59 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10u" (at 275.59 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 275.59 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19702.html" (at 275.59 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19702" (at 275.59 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CL10A106KP8NNNC" (at 275.59 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Samsung Electro-Mechanics" (at 275.59 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "16c39f43-3b16-5b1d-a9b8-286109796da7"))
+	(pin "2" (uuid "fdbb821e-eae1-52bc-a66c-ca8bd7d37b89"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "C10") (unit 1))))
+)
+(symbol
+	(lib_id "Device:FerriteBead")
+	(at 314.96 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "32106c57-82a6-545f-b4b4-99eed8b0c02e")
+	(property "Reference" "FB1" (at 314.96 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "600R@100MHz" (at 314.96 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 314.96 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19330.html" (at 314.96 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19330" (at 314.96 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "BLM18AG601SN1D" (at 314.96 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Murata" (at 314.96 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "01480f30-602f-5939-acb4-2b5ff6d4111d"))
+	(pin "2" (uuid "b480eeaa-d67b-5993-8eb3-a0af3d464901"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "FB1") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 355.60 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "af0d6613-c6eb-5c4c-9452-4132a167060d")
+	(property "Reference" "C11" (at 355.60 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10u" (at 355.60 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 355.60 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C19702.html" (at 355.60 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C19702" (at 355.60 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CL10A106KP8NNNC" (at 355.60 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Samsung Electro-Mechanics" (at 355.60 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "9e6b31bc-4f38-52dc-bf41-3608bb2282e8"))
+	(pin "2" (uuid "61ea4ea7-d30d-55ad-9751-1538bd4b6c48"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "C11") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 44.45 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "229d363b-2660-5a8e-b8c8-285f76c0d38a")
+	(property "Reference" "TP3" (at 44.45 89.36 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_3V3" (at 44.45 90.96 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 44.45 92.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 44.45 94.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 44.45 95.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 44.45 97.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 44.45 98.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "80cba7aa-a93b-5955-a1c7-0d658f184e52"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "TP3") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 85.09 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "b82a01a4-6d0f-5ecc-8a91-9d68415076a4")
+	(property "Reference" "TP4" (at 85.09 89.36 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_3V3_RF" (at 85.09 90.96 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 85.09 92.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 85.09 94.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 85.09 95.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 85.09 97.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 85.09 98.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "ef52ade5-6418-52fc-b01b-2def5710625f"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "TP4") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 124.46 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "38b606f0-3a58-56f5-a2e3-9bb5d9637a9e")
+	(property "Reference" "TP5" (at 124.46 89.36 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_VBUS_F" (at 124.46 90.96 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 124.46 92.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 124.46 94.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 124.46 95.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 124.46 97.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 124.46 98.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "57fe80fd-31b3-58fa-aed2-d459a79c470c"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "TP5") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 165.10 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "9bb4b087-d1d1-5bca-83ad-2df061870f42")
+	(property "Reference" "TP6" (at 165.10 89.36 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_3V3_A" (at 165.10 90.96 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 165.10 92.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 165.10 94.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 165.10 95.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 165.10 97.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 165.10 98.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "e80154f0-dcbe-5855-9648-51771549fa30"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "TP6") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 204.47 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "cfa87c70-3404-51a3-8324-8b04fb5b93ba")
+	(property "Reference" "TP7" (at 204.47 89.36 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_GND" (at 204.47 90.96 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 204.47 92.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 204.47 94.16 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 204.47 95.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 204.47 97.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 204.47 98.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "764242c3-7063-5f35-95f6-8e006f1905e8"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "TP7") (unit 1))))
+)
+(global_label "VBUS_F" (shape bidirectional) (at 44.45 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f4f77c9a-790f-5692-8209-dae1e41a102a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 52.07 69.85 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e37c4935-df66-5a3e-a9fe-515a6895aaa1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 52.07 69.85 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 44.45 62.23 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8eee1551-8658-58bf-878a-6b1345c2b82c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 59.69 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e66ec8a9-0985-5850-8383-1178d30f8a9c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 59.69 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 100.33 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5ee27e50-ca8a-5d82-a151-dec5dd15c23f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 100.33 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 100.33 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5d49f776-8390-5f4d-830c-a69d463c32fa") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 100.33 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 139.70 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c8b6b50d-79d3-54c5-bdc6-f27a0c71d820") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 139.70 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 139.70 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "97796dad-5e1a-5c08-8370-cf1872c1dbbe") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 139.70 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 180.34 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "097e5b28-f876-5f66-b844-ed2d44baa113") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 180.34 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 187.96 69.85 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6b6181a2-704c-531a-9b5e-b65f6f5a829e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 187.96 69.85 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 180.34 62.23 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d3ae2920-fbf2-5ae9-850b-67afda414b61") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 180.34 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_RF" (shape bidirectional) (at 195.58 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3c120d14-c407-51c7-a79c-79025067d850") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 195.58 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 234.95 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9ff6543b-1496-5631-8588-b4583a506781") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 234.95 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 234.95 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b08b69ac-faf4-5284-9792-8a8fad0471a2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 234.95 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_RF" (shape bidirectional) (at 275.59 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b6844a41-b5f5-590d-81c3-ef89670d8c5f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 275.59 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 275.59 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3a4723a6-be7d-5a28-bbbe-e5c6333c3b25") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 275.59 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 314.96 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "803db9e0-7739-5357-b823-8d372219d61c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_A" (shape bidirectional) (at 314.96 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3c8f536d-38ec-59f6-8959-89fc07b0138d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 314.96 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_A" (shape bidirectional) (at 355.60 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "dbbfe979-e3f9-557b-bbe3-269d9f53234b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 355.60 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 355.60 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5da414b8-1b9a-5dd2-9df6-27b2ab036084") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 355.60 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 44.45 86.36 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f113751f-d747-51e8-a306-a28867d0bc4e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_RF" (shape bidirectional) (at 85.09 86.36 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "82fabab5-01a2-5f5f-a760-47e18540f1ee") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VBUS_F" (shape bidirectional) (at 124.46 86.36 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0a3a7f59-6e11-5acb-8a83-a1aee56fa19f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.46 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3_A" (shape bidirectional) (at 165.10 86.36 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8a8639fd-daf3-5343-b40b-81cdf3fa3cb2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 165.10 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 204.47 86.36 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "518f4524-0b37-516c-a8b8-a9523eedc21e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.47 86.36 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 57.15 62.23) (uuid "61c2fe02-3a6f-5af8-af80-6f2fe4d0f71c"))
+(no_connect (at 193.04 62.23) (uuid "160020b2-219a-5128-aeea-3579095fd892"))
+(symbol
+	(lib_id "power:PWR_FLAG")
+	(at 25.40 12.70 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom no)
+	(on_board no)
+	(dnp no)
+	(uuid "aa2d145f-8d27-5e1f-8b44-4f90f587ac82")
+	(property "Reference" "#FLG_03_3V3_A" (at 25.40 14.70 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Value" "PWR_FLAG" (at 25.40 10.70 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "e7572ea7-1517-576b-b7f6-7c3b23bfe923"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/9f433586-44fd-59c0-8af9-740bfd9606a0" (reference "#FLG_03_3V3_A") (unit 1))))
+)
+(global_label "3V3_A" (shape bidirectional) (at 25.40 12.70 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0081458c-9e9b-576b-b713-36ccfd6fe987") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 25.40 12.70 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(embedded_fonts no)
+)

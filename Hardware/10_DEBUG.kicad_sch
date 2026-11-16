@@ -1,0 +1,495 @@
+(kicad_sch
+	(version 20260206)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "340aecdf-605c-523e-b97f-ccfce69b9158")
+	(paper "A2")
+	(title_block
+		(title "NIGHTHAWK 10_DEBUG")
+		(date "2026-11-07")
+		(rev "A")
+		(comment 1 "NIGHTHAWK ESL SECURITY RESEARCH")
+		(comment 2 "Generated from Hardware/build/design.py")
+	)
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27)
+						(xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27)
+						(xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+(symbol
+	(lib_id "Connector_Generic:Conn_01x04")
+	(at 49.53 59.69 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "cb9db4cc-3f0f-59ae-b5fc-122b17e3fad7")
+	(property "Reference" "J8" (at 49.53 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "UART" (at 49.53 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 49.53 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C2691448.html" (at 49.53 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C2691448" (at 49.53 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "PZ254V-11-04P" (at 49.53 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "XFCN" (at 49.53 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "3afa99d5-f061-530a-99cc-882bda7c5e7d"))
+	(pin "2" (uuid "6476b7d7-21dd-5567-976e-88c02ecceef0"))
+	(pin "3" (uuid "d86d710f-9763-57b2-aa27-71fc331d0d4a"))
+	(pin "4" (uuid "74a187a7-d135-5d5a-b258-8fdb5012cd08"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/13a2496f-b68b-5b0f-abdc-462c3d7df54e" (reference "J8") (unit 1))))
+)
+(symbol
+	(lib_id "Connector_Generic:Conn_01x04")
+	(at 90.17 59.69 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "69e47da5-2f6a-5259-a34d-9787c339d433")
+	(property "Reference" "J9" (at 90.17 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "DEBUG" (at 90.17 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 90.17 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C2691448.html" (at 90.17 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C2691448" (at 90.17 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "PZ254V-11-04P" (at 90.17 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "XFCN" (at 90.17 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "9d2315e0-99a9-5fca-a6a2-e4c810c76889"))
+	(pin "2" (uuid "c5447f4c-929a-5d90-900a-4dcc3449af9f"))
+	(pin "3" (uuid "e3fe89f5-4f93-5b8c-86c9-955ac9389bdf"))
+	(pin "4" (uuid "7e1109b4-b3e2-5e6e-a9de-8df9e1b1cbe6"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/13a2496f-b68b-5b0f-abdc-462c3d7df54e" (reference "J9") (unit 1))))
+)
+(symbol
+	(lib_id "Switch:SW_Push")
+	(at 129.54 54.61 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "2991c4fc-7f50-5f58-a621-66dc507ba6e5")
+	(property "Reference" "SW1" (at 129.54 57.61 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "RESET" (at 129.54 59.21 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS810" (at 129.54 60.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C221895.html" (at 129.54 62.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C221895" (at 129.54 64.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "PTS810SJG250SMTRLFS" (at 129.54 65.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "C&K" (at 129.54 67.21 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "83eb0240-316e-5c67-a26f-61d2fbc78fd2"))
+	(pin "2" (uuid "c74ca5c4-3d75-5217-8590-963fb71da3be"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/13a2496f-b68b-5b0f-abdc-462c3d7df54e" (reference "SW1") (unit 1))))
+)
+(symbol
+	(lib_id "Switch:SW_Push")
+	(at 180.34 54.61 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "7f7eb228-c94b-542d-ae7f-160716638fb2")
+	(property "Reference" "SW2" (at 180.34 57.61 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "BOOT" (at 180.34 59.21 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS810" (at 180.34 60.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C221895.html" (at 180.34 62.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C221895" (at 180.34 64.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "PTS810SJG250SMTRLFS" (at 180.34 65.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "C&K" (at 180.34 67.21 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "3c49620f-e04c-58f2-80a3-0b56f21b5108"))
+	(pin "2" (uuid "9a388dfb-f352-5380-ab16-fd7edb0b84ed"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/13a2496f-b68b-5b0f-abdc-462c3d7df54e" (reference "SW2") (unit 1))))
+)
+(global_label "GND" (shape bidirectional) (at 44.45 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "43b1f8e6-def1-541f-8073-c7f5485827c1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 57.15 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 44.45 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "62c8e453-1274-5d4b-9a05-5af4e9b50b00") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "UART_TX" (shape bidirectional) (at 44.45 62.23 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c5ad4ea0-d19b-5f5a-9012-5e3bead944b3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "UART_RX" (shape bidirectional) (at 44.45 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "84869598-51a8-557f-91ef-787a7fbcc4f2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 64.77 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 85.09 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5cdf0b49-b562-59d7-b4f7-bfc908e56ef2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 57.15 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "3V3" (shape bidirectional) (at 85.09 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a6d61c31-1b98-5f79-8c2c-663efc8b89de") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 59.69 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "EN" (shape bidirectional) (at 85.09 62.23 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "379cedfa-d96a-54d6-8270-19cce72c0d51") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BOOT" (shape bidirectional) (at 85.09 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "abcfd565-f1c8-5278-8ccc-4bb49aeec80a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 64.77 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RESET_BTN" (shape bidirectional) (at 124.46 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9972922f-b147-5189-8672-87cee9141530") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.46 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 134.62 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2833e49c-77c6-55f4-8ae2-383340be3a24") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.62 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BOOT" (shape bidirectional) (at 175.26 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "de68b8ca-84d8-52bb-a1ff-dd6325a3baa2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 175.26 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 185.42 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5ffcd95b-2635-59e8-affd-59a752b55c6a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 185.42 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(embedded_fonts no)
+)

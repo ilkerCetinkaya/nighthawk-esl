@@ -1,0 +1,13 @@
+NIGHTHAWK REV A manufacturing checklist (status as of 2026-11-07)
+[x] 4-layer stackup JLC04161H-7628 recorded in board file
+[x] DRC: 0 errors, 0 unconnected (3 silk-edge warnings from the USB-C footprint)
+[x] ERC: 0 violations
+[x] Gerber, drill, BOM, CPL exported from final PCB; BOM and CPL references match
+[x] Every BOM line has an LCSC number read on an LCSC page (grade A) or reported by a sub-agent (grade B, see Engineering_BOM.xlsx)
+[ ] JLCPCB assembly viewer rotation check (NOT DONE)
+[ ] JLCPCB impedance calculator confirmation of 0.36 mm 50 ohm trace (NOT DONE)
+[ ] Black solder mask availability and price (NOT CHECKED)
+[ ] Stock re-check before ordering (J7 707 pcs, J2/J3 204 pcs at check time)
+[ ] Datasheet pin check for USBLC6-2SC6, TLV75533, DM3AT detect pins (NOT DONE)
+[ ] Firmware compile (NOT DONE), desktop app run (NOT DONE)
+[ ] First-article tests: power rails, interlock truth table, USB enumeration, SD, RF path continuity (NOT DONE)

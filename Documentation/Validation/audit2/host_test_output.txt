@@ -1,0 +1,51 @@
+./test_main
+T0 health_core unit checks
+T1 all tasks healthy
+  armed 20 s, resets=0, WDI falling edges=400
+T2a critical task stalled: sampler (I2C hang) while armed
+  ttout=900 ms: ARM low 440 ms after stall, hardware reset 700 ms after that
+  ttout=1600 ms: ARM low 440 ms after stall, hardware reset 1400 ms after that
+  ttout=2500 ms: ARM low 440 ms after stall, hardware reset 2300 ms after that
+T2b critical task stalled: CLI command blocked (e.g. SD write) while armed
+  CLI blocked: ARM low after 5040 ms (deadline 5000 ms)
+  8 s command reporting progress every 100 ms: still ARMED
+T3 health supervisor stalled while armed (ARM latched high, no reset yet)
+  WDI stuck low (stalled mid-pulse), ttout=900 ms: rails on for 900 ms after supervisor stall
+  WDI stuck low (stalled mid-pulse), ttout=1600 ms: rails on for 1600 ms after supervisor stall
+  WDI stuck low (stalled mid-pulse), ttout=2500 ms: rails on for 2500 ms after supervisor stall
+  WDI stuck high (idle), ttout=900 ms: rails on for 885 ms after supervisor stall
+  WDI stuck high (idle), ttout=1600 ms: rails on for 1585 ms after supervisor stall
+  WDI stuck high (idle), ttout=2500 ms: rails on for 2485 ms after supervisor stall
+  exposure is bounded by the TPS3823 time-out (0.9 / 1.6 / 2.5 s min/typ/max); it is not zero
+T4 I2C failure during arm / disarm
+  I2C failure: ARM low in 90 ms, latched FAULT, recovery only via disarm
+T5 MCU reset (reset button) while armed
+  rails off at reset edge; retained TCA bits cleared by boot sequence; no re-arm without request
+  arming aborted in PRECHECK, ARM never rose, when enables could not be cleared
+T5b enable raised by a NON-firmware cause (bit flip, ESD) around the ARM transition
+  swept offsets 0..800 ms after the request; raised before ARMED -> never ended ARMED; worst module power exposure 98 ms (non-firmware source cannot be prevented by firmware)
+T5c firmware enable path is refused unless ARMED
+  permit only in ARMED; revoked on OPEN; enables cleared
+T9 sampler: execution progress vs acquisition success vs peripheral health
+  repeated I2C failure is a peripheral fault (latched), never reported as healthy operation
+  output register mismatch: ARM low in 90 ms
+  enable pin read high with output low: arm refused
+T10 stale / reused / inconsistent samples can never reach ARMED (supervisor_core, synthetic samples)
+T11 integrated: sampler frozen / stalled before arm request
+  stalled sampler: ARM never rose (state DISARMED)
+T12 PRECHECK counts a sample only if ALL conditions hold; any failing sample aborts before ARM rises
+  7 conditions x 3 sample positions: every failing sample aborted, ARM never rose
+  three consecutive fully valid samples -> ARMING
+  wraparound: valid across 2^32 boundary, stale across boundary rejected
+  future timestamps rejected in PRECHECK, ARMING and ARMED
+T13 integrated PRECHECK (model): physical enable pin high, output mismatch, REV A interlock behaviour
+  pin high / mismatch abort before ARM; REV A open loop is detected in ARMING (rails off throughout)
+T6 watchdog timeout path (WDI stops, e.g. MCU halted) at ttout min/typ/max
+  ttout=900 ms: reset asserted 900 ms after last WDI falling edge
+  ttout=1600 ms: reset asserted 1600 ms after last WDI falling edge
+  ttout=2500 ms: reset asserted 2500 ms after last WDI falling edge
+T7 interlock loop / enclosure open while armed
+  loop open: rails off at 0 ms (hardware), supervisor state OPEN, recovery needs disarm
+  enclosure open: rails off at 0 ms (hardware), supervisor state OPEN, recovery needs disarm
+
+checks=750 failures=0

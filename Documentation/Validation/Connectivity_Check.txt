@@ -1,0 +1,4 @@
+Connectivity check (KiCad DRC engine, kicad-cli 10.0.6)
+unconnected items: 0
+shorting items: 0
+RESULT: PASS

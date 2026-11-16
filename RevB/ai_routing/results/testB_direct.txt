@@ -1,0 +1,15 @@
+seconds 11.5
+jar 0 100.0 247 [] 17 11.493
+found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.932 WARN   Wiring.write_wire_scope: net not found
+2026-11-09 01:20:45.934 INFO   Saved 43824 bytes to '<project>/output/routing/subset_kmp.ses'.
+

@@ -1,0 +1,47 @@
+1. Free-space path loss between isotropic antennas (Friis); valid only beyond the reactive near field
+  f = 433.92 MHz: lambda = 691 mm, reactive near-field boundary lambda/2pi = 110 mm
+    20 mm: -8.8 dB, 30 mm: -5.3 dB, 40 mm: -2.8 dB, 60 mm: 0.8 dB, 80 mm: 3.3 dB
+  f = 868.00 MHz: lambda = 345 mm, reactive near-field boundary lambda/2pi = 55 mm
+    20 mm: -2.8 dB, 30 mm: 0.8 dB, 40 mm: 3.3 dB, 60 mm: 6.8 dB, 80 mm: 9.3 dB
+  f = 2440.00 MHz: lambda = 123 mm, reactive near-field boundary lambda/2pi = 20 mm
+    20 mm: 6.2 dB, 30 mm: 9.7 dB, 40 mm: 12.2 dB, 60 mm: 15.8 dB, 80 mm: 18.3 dB
+  ESP32-C3 max TX power 20.0 dBm (datasheet 'RF transmit power range -24.0 ~ 20.0 dBm'). Received power at an isotropic 2.44 GHz port 60 mm away, 0 dBi both ends: 4.2 dBm (illustrative; near-field, antenna patterns and board currents not modelled)
+
+2. Harmonic coincidences
+  TPS63802 typ. fsw (datasheet, no load, forced PWM): fsw 1.40 MHz -> harmonics in 12.71-14.41 MHz: n=10 (14.00 MHz)
+  TPS63802 typ. fsw (datasheet, no load, forced PWM): fsw 1.60 MHz -> harmonics in 12.71-14.41 MHz: n=8 (12.80 MHz), n=9 (14.40 MHz)
+  TPS63802 typ. fsw (datasheet, no load, forced PWM): fsw 2.10 MHz -> harmonics in 12.71-14.41 MHz: none
+  any fsw between 1.4 and 2.1 MHz has a harmonic n in 7..9 that can fall on 13.56 MHz; e.g. 13.56/7 = 1.937 MHz, 13.56/8 = 1.695 MHz, 13.56/9 = 1.507 MHz
+  13.56 MHz NFC carrier x 32 = 433.92 MHz (433.92 MHz ISM)
+  13.56 MHz NFC carrier x 64 = 867.84 MHz (868 MHz SRD)
+  13.56 MHz NFC carrier x 177 = 2400.12 MHz (2.4 GHz ISM)
+  ESP32-C3 40 MHz crystal x 60 = 2400 MHz (inside 2.400-2.4835 GHz)
+  ESP32-C3 40 MHz crystal x 61 = 2440 MHz (inside 2.400-2.4835 GHz)
+  ESP32-C3 40 MHz crystal x 62 = 2480 MHz (inside 2.400-2.4835 GHz)
+  USB full-speed 12 Mbit/s: data spectrum has energy at and below 12 MHz and harmonics of 6 MHz; 12 MHz is 0.7 MHz below the lower NFC subcarrier (12.71 MHz)
+
+3. Shield can aperture leakage estimate SE ~ 20 log10(lambda / (2 L)) - 10 log10(N) (single-slot rule of thumb, not a simulation)
+  434 MHz: L=2 mm x1: 45 dB; L=3 mm x10: 31 dB; L=5 mm x1: 37 dB; L=10 mm x1: 31 dB
+  868 MHz: L=2 mm x1: 39 dB; L=3 mm x10: 25 dB; L=5 mm x1: 31 dB; L=10 mm x1: 25 dB
+  2440 MHz: L=2 mm x1: 30 dB; L=3 mm x10: 16 dB; L=5 mm x1: 22 dB; L=10 mm x1: 16 dB
+  5800 MHz: L=2 mm x1: 22 dB; L=3 mm x10: 9 dB; L=5 mm x1: 14 dB; L=10 mm x1: 8 dB
+
+4. NFC PCB coil inductance, Greenhouse segment summation (rectangular spiral, trace w=0.5 mm, t=0.035 mm, spacing 0.5 mm)
+  28 x 12 mm, 2 turns: L ~ 0.18 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  28 x 12 mm, 3 turns: L ~ 0.31 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  28 x 12 mm, 4 turns: L ~ 0.43 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  24 x 14 mm, 2 turns: L ~ 0.18 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  24 x 14 mm, 3 turns: L ~ 0.30 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  24 x 14 mm, 4 turns: L ~ 0.42 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  20 x 20 mm, 2 turns: L ~ 0.19 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  20 x 20 mm, 3 turns: L ~ 0.34 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  20 x 20 mm, 4 turns: L ~ 0.48 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  40 x 20 mm, 2 turns: L ~ 0.33 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  40 x 20 mm, 3 turns: L ~ 0.59 uH (overlap-length approximation of mutuals; +/-15 % expected)
+  40 x 20 mm, 4 turns: L ~ 0.88 uH (overlap-length approximation of mutuals; +/-15 % expected)
+
+5. Thermal (datasheet thermal resistances, JEDEC boards; real board differs)
+  BQ24074 linear charge 0.5 A at VBAT 3.0 V from 5.0 V: P = 1.00 W -> dT = 44 C (RthetaJA 44.5 C/W); IC reduces charge current in thermal regulation
+  BQ24074 linear charge 0.5 A at VBAT 3.7 V from 5.0 V: P = 0.65 W -> dT = 29 C (RthetaJA 44.5 C/W); IC reduces charge current in thermal regulation
+  BQ24074 linear charge 0.5 A at VBAT 4.1 V from 5.0 V: P = 0.45 W -> dT = 20 C (RthetaJA 44.5 C/W); IC reduces charge current in thermal regulation
+  TLV755P 3.6 V -> 3.3 V at 300 mA: P = 0.09 W -> dT = 9 C (RthetaJA 100.8 C/W EVM)

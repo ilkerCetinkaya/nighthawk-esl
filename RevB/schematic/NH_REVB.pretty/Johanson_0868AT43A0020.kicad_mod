@@ -1,0 +1,57 @@
+(footprint "Johanson_0868AT43A0020"
+	(version 20260206)
+	(generator "nighthawk_revb")
+	(layer "F.Cu")
+	(descr "Johanson 0868AT43A0020 868 MHz chip antenna 7x2 mm (datasheet v1.8, mounting figure). Pad 1 feed on the right. Meander copper and ground keepout belong to the board layout.")
+	(property "Reference" "REF**"
+		(at 0 -2.00 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Johanson_0868AT43A0020"
+		(at 0 2.00 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(pad "1" smd rect
+		(at 3.500 0.000)
+		(size 1.000 1.800)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" smd rect
+		(at -3.500 0.000)
+		(size 1.000 1.800)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(fp_rect
+		(start -3.500 -1.000)
+		(end 3.500 1.000)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_rect
+		(start -4.200 -1.200)
+		(end 4.200 1.200)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+)

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900" viewBox="0 0 1100 900" font-family="Helvetica,Arial,sans-serif">
+<rect width="1100" height="900" fill="#fff"/>
+<text x="20" y="30" font-size="18" font-weight="bold">Battery mechanical envelope - PowerXtra 1S Li-Po (dimensions INFERRED from part-number pattern, datasheet not found)</text>
+<text x="60" y="78" font-size="14" font-weight="bold">Side section (x-z), board length 80 mm, scale 9 px/mm</text>
+<rect x="114.0" y="195.6" width="666.0" height="14.4" fill="#1b5e20" fill-opacity="0.6" stroke="#222"/>
+<text x="447.0" y="206.8" font-size="11" text-anchor="middle">PCB 1.6</text>
+<rect x="60.0" y="195.6" width="54.0" height="14.4" fill="#ffffff" fill-opacity="0.6" stroke="#222" stroke-dasharray="5 3"/>
+<rect x="114.0" y="166.8" width="126.0" height="28.8" fill="#4c78a8" fill-opacity="0.6" stroke="#222"/>
+<text x="177.0" y="185.2" font-size="11" text-anchor="middle">ESP32 3.2</text>
+<rect x="60.0" y="188.4" width="54.0" height="7.2" fill="#4c78a8" fill-opacity="0.6" stroke="#222"/>
+<rect x="714.3" y="166.3" width="65.7" height="29.3" fill="#9d755d" fill-opacity="0.6" stroke="#222"/>
+<text x="747.2" y="184.9" font-size="11" text-anchor="middle">USB-C 3.26</text>
+<rect x="325.5" y="210.0" width="454.5" height="2.7" fill="#999999" fill-opacity="0.6" stroke="#222"/>
+<rect x="325.5" y="212.7" width="454.5" height="46.8" fill="#e45756" fill-opacity="0.6" stroke="#222"/>
+<text x="552.8" y="240.1" font-size="11" text-anchor="middle">cell 5.0 +0.2 (PX502050) / 4.0 (PX402050)</text>
+<rect x="325.5" y="259.5" width="454.5" height="4.5" fill="#ffd0d0" fill-opacity="0.6" stroke="#222" stroke-dasharray="5 3"/>
+<text x="552.8" y="265.8" font-size="11" text-anchor="middle">swelling allowance 0.5 (assumed)</text>
+<text x="60" y="300" font-size="12">Bottom: 0.3 mm adhesive foam + cell 5.2 max + 0.5 mm swelling allowance = 6.0 mm below the PCB; top: 3.3 mm (USB-C 3.26, ESP32 3.2).</text>
+<text x="60" y="320" font-size="12">Assembly height ~ 3.3 + 1.6 + 6.0 = 10.9 mm (PX502050) or ~ 9.9 mm (PX402050), before enclosure walls. SMA edge connectors extend ~ +/-3.2 mm about the board plane (to be confirmed).</text>
+<text x="60" y="340" font-size="12">Section is a projection on x: the cell (y 19.5-40.0) does not overlap the USB-C legs (y 0-9.4). Cell edge x = 29.5 mm, i.e. 23.5 mm from the antenna strip (x 0-6); Espressif: >= 15 mm.</text>
+<text x="60" y="408" font-size="14" font-weight="bold">Plan view of the bottom (x-y), cell, leads, connector and retention</text>
+<path d="M 60.0 780.0 L 780.0 780.0 L 780.0 420.0 L 114.0 420.0 L 114.0 717.0 L 60.0 717.0 Z" fill="#e8f0e3" stroke="#1b5e20" stroke-width="2"/>
+<rect x="325.5" y="420.0" width="454.5" height="184.5" fill="#e45756" fill-opacity="0.45" stroke="#222"/>
+<text x="552.8" y="516.2" font-size="11" text-anchor="middle">cell envelope 50.5 x 20.5 (L x W max, assumed)</text>
+<rect x="316.5" y="411.0" width="472.5" height="202.5" fill="#ffffff" fill-opacity="0.45" stroke="#222" stroke-dasharray="5 3"/>
+<rect x="258.0" y="420.0" width="52.2" height="58.5" fill="#e45756" fill-opacity="0.45" stroke="#222"/>
+<text x="284.1" y="453.2" font-size="11" text-anchor="middle">conn</text>
+<text x="60" y="830" font-size="12"></text>
+<text x="60" y="810" font-size="12">Retention: 0.3 mm double-sided foam on the cell face + housing rib; no clips over the cell; dashed = 1 mm keep-free border for tolerance/swelling.</text>
+<text x="60" y="830" font-size="12">Leads: 2 wires from the cell's short edge to the board connector (lead length and connector type depend on the delivered cell: NOT verified).</text>
+<text x="60" y="850" font-size="12">Protection: a PCM is often fitted at the lead end and can add length; the 50.5 mm envelope may not include it - verify on the physical cell.</text>
+<text x="60" y="870" font-size="12">No bottom-side components inside the cell envelope; L4 under the cell: GND fill, no switching nodes (heat and coupling).</text>
+</svg>

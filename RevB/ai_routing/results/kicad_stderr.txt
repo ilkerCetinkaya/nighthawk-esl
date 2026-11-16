@@ -1,0 +1,19 @@
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T20:12:20.846009Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=write profile=pcb_layout project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T20:12:20.846213Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=write profile=pcb_layout request_id=None tool=None transport=stdio ts=2026-11-08T20:12:20.846378Z version=4.9.0
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T20:12:26.583902Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=write profile=pcb_layout project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T20:12:26.584038Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=write profile=pcb_layout request_id=None tool=None transport=stdio ts=2026-11-08T20:12:26.584190Z version=4.9.0
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T20:12:31.717278Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=experimental profile=full project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T20:12:31.717414Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=experimental profile=full request_id=None tool=None transport=stdio ts=2026-11-08T20:12:31.717561Z version=4.9.0
+Tool already exists: sch_annotate
+Tool already exists: sch_annotate
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T20:12:33.315187Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=experimental profile=agent_full project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T20:12:33.320006Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=experimental profile=agent_full request_id=None tool=None transport=stdio ts=2026-11-08T20:12:33.320175Z version=4.9.0
+Tool already exists: sch_annotate
+Tool already exists: sch_annotate
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T20:12:34.877952Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=experimental profile=pcb_only project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T20:12:34.878380Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=experimental profile=pcb_only request_id=None tool=None transport=stdio ts=2026-11-08T20:12:34.878558Z version=4.9.0

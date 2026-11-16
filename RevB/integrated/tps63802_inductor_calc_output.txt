@@ -1,0 +1,31 @@
+inductor: Murata DFE252012F-R47M, 0.47 uH +-20 %, DCR max 23 mohm, Isat(-30 %) 6.7 A, Irms(dT 40 K) 4.9 A  [DS J(E)TE243A-0017B-01]
+thermal resistance implied by the rated point: 72 K/W  [CALC]
+TPS63802 boost peak current limit: min 4.0 / typ 5.0 / max 5.75 A  [DS 8.5]; recommended effective L 0.37-0.57 uH  [DS 8.3]
+initial inductance window: 0.376-0.564 uH (inside the recommended window only at the lower edge); with an assumed -10 % bias drop at working current the minimum is 0.338 uH  [A]
+TI's own listed inductors (XFL4015-471ME, DFE201612E) are also 0.47 uH +-20 %, so the same window applies to them  [DS table 10-2; tolerance of the TI parts not read]
+
+Vin  Iout  mode        L_eff   D     Iavg   ripple_pp  Ipk(+20% rule)  Irms   P_dcr(85C)  dT_self
+2.5  0.8  nom          0.470  0.306 1.28  0.77      1.67 (2.00)   1.30   48 mW     3.5 K
+2.5  0.8  min-tol-bias 0.338  0.306 1.28  1.07      1.82 (2.18)   1.32   49 mW     3.6 K
+2.5  1.0  nom          0.470  0.306 1.60  0.77      1.99 (2.38)   1.62   74 mW     5.4 K
+2.5  1.0  min-tol-bias 0.338  0.306 1.60  1.07      2.14 (2.56)   1.63   75 mW     5.5 K
+2.5  2.0  nom          0.470  0.306 3.20  0.77      3.59 (4.30)   3.21   292 mW     21.2 K
+2.5  2.0  min-tol-bias 0.338  0.306 3.20  1.07      3.74 (4.48)   3.22   293 mW     21.2 K
+3.0  0.8  nom          0.470  0.167 1.07  0.76      1.45 (1.74)   1.09   34 mW     2.4 K
+3.0  0.8  min-tol-bias 0.338  0.167 1.07  1.06      1.59 (1.91)   1.11   35 mW     2.5 K
+3.0  1.0  nom          0.470  0.167 1.33  0.76      1.71 (2.06)   1.35   52 mW     3.8 K
+3.0  1.0  min-tol-bias 0.338  0.167 1.33  1.06      1.86 (2.23)   1.37   53 mW     3.8 K
+3.0  2.0  nom          0.470  0.167 2.67  0.76      3.05 (3.66)   2.68   203 mW     14.7 K
+3.0  2.0  min-tol-bias 0.338  0.167 2.67  1.06      3.19 (3.83)   2.68   204 mW     14.8 K
+3.3  0.8  nom          0.470  0.083 0.97  0.42      1.18 (1.41)   0.98   27 mW     2.0 K
+3.3  0.8  min-tol-bias 0.338  0.083 0.97  0.58      1.26 (1.51)   0.98   27 mW     2.0 K
+3.3  1.0  nom          0.470  0.083 1.21  0.42      1.42 (1.71)   1.22   42 mW     3.1 K
+3.3  1.0  min-tol-bias 0.338  0.083 1.21  0.58      1.50 (1.80)   1.22   42 mW     3.1 K
+3.3  2.0  nom          0.470  0.083 2.42  0.42      2.63 (3.16)   2.43   167 mW     12.1 K
+3.3  2.0  min-tol-bias 0.338  0.083 2.42  0.58      2.71 (3.26)   2.43   168 mW     12.1 K
+
+worst-case steady-state peak current in the table: 3.74 A (x1.2 = 4.48 A) against Isat 6.7 A and the converter's maximum boost limit 5.75 A  [CALC]
+the inductor Isat 6.7 A is above the maximum current limit 5.75 A, so even a fault that runs the converter into its limit does not drive this inductor into saturation  [DS/CALC]
+system load budget used above: ESP32-C3 TX peak about 0.34 A + TRF7970A up to 0.15 A + IR LED average 0.05 A + CC1352R, flash, logic about 0.1 A = about 0.65 A; 0.8 and 1.0 A are budget values, 2.0 A is the converter's rating  [A]
+stability: TPS63802 uses internal peak-current-mode compensation; stable inside the datasheet windows L 0.37-0.57 uH and CO,eff >= 7 uF. CO is 2 x 22 uF 10 V X5R 0805 (about 24 uF effective at 3.6 V if 55 % remains [A]); the lower edge of L is the weak point  [DS/A]
+not verified: inductance versus DC current curve (Murata SimSurfing), core loss at 1.4-2.1 MHz, measured efficiency and ripple

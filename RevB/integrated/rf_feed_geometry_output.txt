@@ -1,0 +1,11 @@
+JLCPCB JLC04161H-7628 (jlcpcb.com/impedance): top Cu 0.035 mm, 7628 prepreg 0.2104 mm (eps_r 4.4), L2 Cu 0.0152, core 1.065 (4.6), L3 Cu 0.0152, prepreg 0.2104, bottom Cu 0.035; mask 1.2 mil on substrate, 0.6 mil on trace, 1.2 mil between traces, eps_r 3.8
+JLCPCB calculator, microstrip L1 over L2, 50 ohm: 14.12 mil = 0.3586 mm
+closed-form check (Hammerstad-Jensen, zero thickness, no mask): 0.3586 mm -> 53.6 ohm, eps_eff 3.30; width for 50 ohm = 0.403 mm
+conformal-mapping CPWG with ground on L2, zero conductor thickness, no mask [CALC, not JLCPCB data]: width for 50 ohm
+   gap 0.15 mm: width 0.355 mm (14.0 mil), Z 50.0 ohm, eps_eff 3.10
+   gap 0.20 mm: width 0.376 mm (14.8 mil), Z 50.0 ohm, eps_eff 3.17
+   gap 0.25 mm: width 0.389 mm (15.3 mil), Z 50.0 ohm, eps_eff 3.22
+   gap 0.30 mm: width 0.398 mm (15.7 mil), Z 50.0 ohm, eps_eff 3.27
+   gap 0.40 mm: width 0.411 mm (16.2 mil), Z 50.0 ohm, eps_eff 3.34
+   gap 0.60 mm: width 0.427 mm (16.8 mil), Z 50.0 ohm, eps_eff 3.43
+The JLCPCB coplanar calculator result was NOT obtained (the web form returned no width in the automated run); order controlled impedance with the JLCPCB-calculated width.

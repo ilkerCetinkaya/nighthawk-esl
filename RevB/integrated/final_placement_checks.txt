@@ -1,0 +1,10 @@
+Final placement checks (rectangles from placement_b.json)
+RF shield frame outer 21.5 x 21.5 mm at x 58.10-79.60, y 15.25-36.75 (board edge x=80: 0.40 mm)
+nearest foreign courtyards to the frame (lid removal side clearance): [('F1', 0.3), ('U3', 0.4), ('R15', 0.5), ('C9', 0.7), ('D1', 0.8), ('R14', 0.8), ('J3', 1.2), ('J4', 1.4)]
+USB-C rect [52.63, -0.85, 63.37, 8.66] edge distance to bottom edge -0.85 to right edge 16.63
+battery connector rect [35.35, 4.06, 44.65, 14.34] edge distance to bottom edge 4.06 to right edge 35.35
+U.FL 2.4 rect [65.78, 37.95, 70.22, 43.05] edge distance to bottom edge 37.95 to right edge 9.78
+U.FL sub rect [57.78, 8.75, 62.22, 13.84] edge distance to bottom edge 8.75 to right edge 17.78
+USB-C courtyard bottom edge y = -0.85 mm: shell front overhangs the board edge by 0.85 mm in the KiCad footprint
+battery connector courtyard x 35.4-44.6, y 4.1-14.3; cable keepout x 37-43, y 0-4; notch x 38-42, y 0-3
+ESP32: module tip at x 0, body x 6-20.1, pad 1 copper starts at x 6.7 (notch edge at 6.0: 0.7 mm), DRC edge clearance 0.3 mm

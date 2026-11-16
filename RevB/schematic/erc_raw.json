@@ -1,0 +1,88 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-08T20:36:35",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a",
+            "violations": [
+                {
+                    "description": "Symbol 'AO3400A' doesn't match copy in library 'Transistor_FET'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [AO3400A]",
+                            "pos": {
+                                "x": 1.2827,
+                                "y": 0.635
+                            },
+                            "uuid": "ade54536-b1cb-5c32-bd9f-73e64d316630"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        },
+        {
+            "path": "/01_MCU_STORAGE/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/ed4aaa01-bdca-5367-acd2-92389a043e08",
+            "violations": []
+        },
+        {
+            "path": "/02_POWER/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/689f7837-701f-57ac-9611-0172ba4b5327",
+            "violations": []
+        },
+        {
+            "path": "/03_CC1352R_RF/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/bb3bcfad-8565-559a-86cf-6bb6c4bc9199",
+            "violations": []
+        },
+        {
+            "path": "/04_NFC_TRF7970A/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/bf68762b-8a9f-5891-94ec-ac954ab16235",
+            "violations": []
+        },
+        {
+            "path": "/05_IR_LINK/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/a3499868-8beb-5c00-a1a6-df6faa52c693",
+            "violations": []
+        },
+        {
+            "path": "/06_INTERLOCK/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/26e4a318-ed22-5085-a3ca-1d589a7808fe",
+            "violations": []
+        },
+        {
+            "path": "/07_IO_UI_DEBUG/",
+            "uuid_path": "/f795248d-36e2-5acf-8a8b-7b3be8f0087a/ac3151b0-3c85-54c9-8d6e-eb7fb508e55f",
+            "violations": []
+        }
+    ],
+    "source": "NIGHTHAWK_REVB.kicad_sch"
+}

@@ -1,0 +1,7 @@
+TPS3431 watchdog timeout candidates (ms)
+preset CWD=10k to VDD, SET1=1 (datasheet min/typ/max): min 170.0 typ 200.0 max 230.0 | margin vs 50 ms toggle (min/50) 3.4x | worst exposure after supervisor stall <= 230 ms
+CCWD 1.0 nF C0G +/-5 % (Eq.1 +/-9.5 %, ideal capacitor): min 116.3 typ 132.4 max 149.2 | margin vs 50 ms toggle (min/50) 2.3x | worst exposure after supervisor stall <= 149 ms
+CCWD 2.2 nF C0G +/-5 % (Eq.1 +/-9.5 %, ideal capacitor): min 196.2 typ 225.3 max 256.0 | margin vs 50 ms toggle (min/50) 3.9x | worst exposure after supervisor stall <= 256 ms
+CCWD 3.3 nF C0G +/-5 % (Eq.1 +/-9.5 %, ideal capacitor): min 269.4 typ 310.4 max 353.9 | margin vs 50 ms toggle (min/50) 5.4x | worst exposure after supervisor stall <= 354 ms
+CCWD 4.7 nF C0G +/-5 % (Eq.1 +/-9.5 %, ideal capacitor): min 362.5 typ 418.8 max 478.5 | margin vs 50 ms toggle (min/50) 7.3x | worst exposure after supervisor stall <= 478 ms
+CCWD 10.0 nF C0G +/-5 % (Eq.1 +/-9.5 %, ideal capacitor): min 715.2 typ 829.0 max 950.1 | margin vs 50 ms toggle (min/50) 14.3x | worst exposure after supervisor stall <= 950 ms

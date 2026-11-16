@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200"><rect width="1200" height="1200" fill="#fff"/>
+<text x="40.0" y="28.0" font-size="16" text-anchor="start" font-family="Helvetica,Arial,sans-serif">NIGHTHAWK REV B antenna geometry (documented dimensions; NOT validated)</text>
+<text x="40.0" y="60.0" font-size="12" text-anchor="start" font-family="Helvetica,Arial,sans-serif">1) TI AN043 IFA, 15.2 x 5.7 mm (SWRA117D fig. 3, table 1; reconstructed from the figure)</text>
+<rect x="40.0" y="72.0" width="608.0" height="228.0" fill="none" fill-opacity="0" stroke="#888" stroke-width="0.8"/>
+<rect x="40.0" y="280.0" width="608.0" height="140.0" fill="#b0b0b0" fill-opacity="0.5" stroke="#555" stroke-width="0.5"/>
+<rect x="60.0" y="84.0" width="200.0" height="20.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="60.0" y="104.0" width="36.0" height="196.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="152.0" y="104.0" width="20.0" height="196.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="240.0" y="104.0" width="20.0" height="105.6" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="240.0" y="189.6" width="120.0" height="20.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="340.0" y="84.0" width="20.0" height="125.6" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="340.0" y="84.0" width="108.0" height="20.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="428.0" y="104.0" width="20.0" height="105.6" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="428.0" y="189.6" width="120.0" height="20.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="528.0" y="84.0" width="20.0" height="125.6" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="528.0" y="84.0" width="108.0" height="20.0" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="616.0" y="104.0" width="20.0" height="157.6" fill="#d98c1f" fill-opacity="0.9" stroke="#7a4a00" stroke-width="0.6"/>
+<text x="280.0" y="436.0" font-size="9" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Layer-2 ground ends 0.5 mm above the stub feet (D4)</text>
+<text x="48.0" y="332.0" font-size="9" text-anchor="start" font-family="Helvetica,Arial,sans-serif">ground via (short stub)</text>
+<text x="144.0" y="336.0" font-size="9" text-anchor="start" font-family="Helvetica,Arial,sans-serif">feed</text>
+<text x="40.0" y="298.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">L1 3.94  L2 2.70  L3 5.00  L4 2.64  L5 2.00  L6 4.90  W1 0.90  W2 0.50  D1 0.50  D2 0.30  D3 0.30  D4 0.50  D5 1.40  D6 1.70 (mm)</text>
+<text x="40.0" y="500.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Reference PCB thickness not published in the note (readme in the TI design, not obtained). Ours: 1.59 mm JLC04161H-7628, antenna region copper-free on every layer.</text>
+<text x="40.0" y="520.0" font-size="12" text-anchor="start" font-family="Helvetica,Arial,sans-serif">2) Johanson 0868AT43A0020 (datasheet v1.8, page 3 figure): chip 8.0 x 1.8 incl. 1.0 mm pads; meander 7.1 x 5.1, trace 0.5, legs 3.0 and 5.1</text>
+<rect x="40.0" y="700.0" width="40.0" height="72.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="320.0" y="700.0" width="40.0" height="72.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="80.0" y="708.0" width="240.0" height="56.0" fill="#cccccc" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="340.0" y="772.0" width="20.0" height="132.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="76.0" y="884.0" width="284.0" height="20.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="76.0" y="784.0" width="20.0" height="120.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<rect x="96.0" y="784.0" width="204.0" height="20.0" fill="#d98c1f" stroke="#7a4a00" stroke-width="0.6"/>
+<text x="40.0" y="940.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Corner placement only: 10 x 11 mm (or 11 x 10 mm) zone with complete ground AND layer clearance free of metal above and below (yellow area in the datasheet); 50 ohm feed line; pi slots required.</text>
+<text x="40.0" y="958.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Meander shape drawn from the datasheet figure; the manufacturer's layout file was not obtained [U].</text>
+<text x="650.0" y="80.0" font-size="12" text-anchor="start" font-family="Helvetica,Arial,sans-serif">3) NFC coil: 18 x 16 mm, 6 turns, 0.25 / 0.10 mm (calc. 1.43 uH, SLOA241C eq. 2)</text>
+<polyline points="670.0,140.0 1060.5,140.0 1060.5,486.5 670.0,486.5 670.0,147.7 1052.8,147.7 1052.8,478.8 677.7,478.8 677.7,155.4 1045.1,155.4 1045.1,471.1 685.4,471.1 685.4,163.1 1037.4,163.1 1037.4,463.4 693.1,463.4 693.1,170.8 1029.7,170.8 1029.7,455.7 700.8,455.7 700.8,178.5 1022.0,178.5 1022.0,448.0 708.5,448.0" fill="none" stroke="#d98c1f" stroke-width="5.5"/>
+<line x1="708.5" y1="448.0" x2="639.2" y2="448.0" stroke="#4c78a8" stroke-width="5.5" stroke-dasharray="6 3"/>
+<text x="650.0" y="540.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">F.Cu spiral (orange); B.Cu underpass from the inner end to the outer return via (blue dashed).</text>
+<text x="650.0" y="556.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pad 1 (outer start) = NFC_COIL_A, pad 2 = GND. No copper on L2, L3 or elsewhere on B.Cu under the window.</text>
+<text x="650.0" y="572.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">TI: 10 mm from metal and from ground planes is recommended; achieved: ESP32 module about 10 mm,</text>
+<text x="650.0" y="588.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">RF shield about 10 mm, ground plane only vertically removed (L2-L4), lateral ground pours not 10 mm [U].</text>
+<text x="650.0" y="640.0" font-size="12" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4) ESP32-C3-WROOM-02: base board cut away over module width + 15 mm each side (Espressif figure); antenna 18 x 6 mm;</text>
+<text x="650.0" y="658.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">our cut-out: x 0-6.0 mm, y 15.5-50 mm; module tip at the board edge, antenna base line at x = 6.0 mm;</text>
+<text x="650.0" y="674.0" font-size="10" text-anchor="start" font-family="Helvetica,Arial,sans-serif">15 mm clear outward and above/below inside the housing is an enclosure requirement (not verifiable here).</text>
+</svg>

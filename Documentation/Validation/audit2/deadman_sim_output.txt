@@ -1,0 +1,24 @@
+== tWD min 170 ms
+  ARM rises 15 ms after power-up (inside power-up hold) -> permit: 0
+  ARM rises after hold, WDI toggling -> permit: 1
+  stays set while WDI toggles: 1
+  supervisor stalls (ARM high): permit cleared after ms: 141
+  still stalled, ARM high, long after WDO pulses: permit: 0
+  WDI toggling resumes, no ARM edge: permit: 0
+  ARM low then high with WDI healthy -> permit: 1
+== tWD typ 200 ms
+  ARM rises 15 ms after power-up (inside power-up hold) -> permit: 0
+  ARM rises after hold, WDI toggling -> permit: 1
+  stays set while WDI toggles: 1
+  supervisor stalls (ARM high): permit cleared after ms: 171
+  still stalled, ARM high, long after WDO pulses: permit: 0
+  WDI toggling resumes, no ARM edge: permit: 0
+  ARM low then high with WDI healthy -> permit: 1
+== tWD max 230 ms
+  ARM rises 15 ms after power-up (inside power-up hold) -> permit: 0
+  ARM rises after hold, WDI toggling -> permit: 1
+  stays set while WDI toggles: 1
+  supervisor stalls (ARM high): permit cleared after ms: 201
+  still stalled, ARM high, long after WDO pulses: permit: 0
+  WDI toggling resumes, no ARM edge: permit: 0
+  ARM low then high with WDI healthy -> permit: 1

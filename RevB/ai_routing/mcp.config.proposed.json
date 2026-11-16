@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "freerouting-local": {
+      "command": "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/bin/python",
+      "args": [
+        "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/fr_mcp_stdio_wrapper.py"
+      ]
+    },
+    "kicad-pro": {
+      "command": "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/bin/kicad-mcp-pro",
+      "args": [
+        "--transport",
+        "stdio",
+        "--project-dir",
+        "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/sandbox/handshake",
+        "--profile",
+        "builder",
+        "--mode",
+        "write",
+        "--no-telemetry",
+        "--log-file",
+        "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/results/kicad_mcp_server.log",
+        "--log-level",
+        "debug"
+      ],
+      "env": {
+        "KICAD_MCP_WORKSPACE_ROOT": "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/sandbox",
+        "KICAD_MCP_KICAD_CLI": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+        "KICAD_MCP_JAVA_EXECUTABLE": "/Users/ilkercetinkaya/Desktop/PCB_design_claude/GPace copy/build/tools/jre25/jdk-25.0.4.1+1-jre/Contents/Home/bin/java"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" font-family="Helvetica,Arial,sans-serif">
+<rect width="1200" height="760" fill="#fff"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#333"/></marker></defs>
+<text x="30" y="34" font-size="19" font-weight="bold">NIGHTHAWK REV B - single-board integrated block diagram</text>
+<rect x="30" y="70" width="200" height="110" rx="6" fill="#9d755d" fill-opacity="0.25" stroke="#9d755d" stroke-width="2"/>
+<text x="130.0" y="92" font-size="14" font-weight="bold" text-anchor="middle">USB-C</text>
+<text x="130.0" y="110" font-size="11" text-anchor="middle">TPD2E2U06 ESD</text>
+<text x="130.0" y="125" font-size="11" text-anchor="middle">PTC, CC 5.1k</text>
+<rect x="30" y="230" width="200" height="120" rx="6" fill="#f58518" fill-opacity="0.25" stroke="#f58518" stroke-width="2"/>
+<text x="130.0" y="252" font-size="14" font-weight="bold" text-anchor="middle">Power</text>
+<text x="130.0" y="270" font-size="11" text-anchor="middle">BQ24074 charger (linear)</text>
+<text x="130.0" y="285" font-size="11" text-anchor="middle">TPS63802 buck-boost 3.6 V</text>
+<text x="130.0" y="300" font-size="11" text-anchor="middle">TLV755P 3V3 / 3V3_RF</text>
+<rect x="30" y="400" width="200" height="90" rx="6" fill="#7f7f7f" fill-opacity="0.25" stroke="#7f7f7f" stroke-width="2"/>
+<text x="130.0" y="422" font-size="14" font-weight="bold" text-anchor="middle">Battery (user)</text>
+<text x="130.0" y="440" font-size="11" text-anchor="middle">1S Li-Po via cable notch</text>
+<text x="130.0" y="455" font-size="11" text-anchor="middle">JST PH 2-pin</text>
+<rect x="330" y="230" width="230" height="150" rx="6" fill="#4c78a8" fill-opacity="0.25" stroke="#4c78a8" stroke-width="2"/>
+<text x="445.0" y="252" font-size="14" font-weight="bold" text-anchor="middle">ESP32-C3-WROOM-02</text>
+<text x="445.0" y="270" font-size="11" text-anchor="middle">host, USB-CDC CLI, storage task</text>
+<text x="445.0" y="285" font-size="11" text-anchor="middle">supervisor (WDI, ARM)</text>
+<text x="445.0" y="300" font-size="11" text-anchor="middle">own 2.4 GHz antenna (radio off</text>
+<text x="445.0" y="315" font-size="11" text-anchor="middle">by default)</text>
+<rect x="330" y="70" width="230" height="110" rx="6" fill="#72b7b2" fill-opacity="0.25" stroke="#72b7b2" stroke-width="2"/>
+<text x="445.0" y="92" font-size="14" font-weight="bold" text-anchor="middle">Hardware interlock</text>
+<text x="445.0" y="110" font-size="11" text-anchor="middle">TPS3823 + TPS3431 dead-man</text>
+<text x="445.0" y="125" font-size="11" text-anchor="middle">SN74LVC1G74 latch, LVC1G08 x7</text>
+<text x="445.0" y="140" font-size="11" text-anchor="middle">TPS22918 x3 rail switches</text>
+<rect x="330" y="440" width="230" height="90" rx="6" fill="#8c6bb1" fill-opacity="0.25" stroke="#8c6bb1" stroke-width="2"/>
+<text x="445.0" y="462" font-size="14" font-weight="bold" text-anchor="middle">GD25Q32E 4 MB</text>
+<text x="445.0" y="480" font-size="11" text-anchor="middle">SPI NOR (log storage)</text>
+<rect x="330" y="580" width="230" height="90" rx="6" fill="#72b7b2" fill-opacity="0.25" stroke="#72b7b2" stroke-width="2"/>
+<text x="445.0" y="602" font-size="14" font-weight="bold" text-anchor="middle">TCA9555 x2 (0x20/0x21)</text>
+<text x="445.0" y="620" font-size="11" text-anchor="middle">CS/RESET/IRQ/rail-sense/permit</text>
+<text x="445.0" y="635" font-size="11" text-anchor="middle">readback</text>
+<rect x="680" y="70" width="250" height="170" rx="6" fill="#17becf" fill-opacity="0.25" stroke="#17becf" stroke-width="2"/>
+<text x="805.0" y="92" font-size="14" font-weight="bold" text-anchor="middle">CC1352R1F3 RF SoC</text>
+<text x="805.0" y="110" font-size="11" text-anchor="middle">2360-2500 MHz: BLE 1M/2M, 802.15.4,</text>
+<text x="805.0" y="125" font-size="11" text-anchor="middle">proprietary 2-GFSK</text>
+<text x="805.0" y="140" font-size="11" text-anchor="middle">sub-GHz port (359-527 / 861-1054 MHz)</text>
+<text x="805.0" y="155" font-size="11" text-anchor="middle">IR timing (timers, comparator)</text>
+<text x="805.0" y="170" font-size="11" text-anchor="middle">under shield can</text>
+<rect x="990" y="50" width="180" height="80" rx="6" fill="#1f77b4" fill-opacity="0.25" stroke="#1f77b4" stroke-width="2"/>
+<text x="1080.0" y="72" font-size="14" font-weight="bold" text-anchor="middle">2.4 GHz PCB IFA</text>
+<text x="1080.0" y="90" font-size="11" text-anchor="middle">TI AN043, 15.2 x 5.7 mm</text>
+<text x="1080.0" y="105" font-size="11" text-anchor="middle">+ U.FL test port</text>
+<rect x="990" y="150" width="180" height="80" rx="6" fill="#9467bd" fill-opacity="0.25" stroke="#9467bd" stroke-width="2"/>
+<text x="1080.0" y="172" font-size="14" font-weight="bold" text-anchor="middle">868 MHz chip ant.</text>
+<text x="1080.0" y="190" font-size="11" text-anchor="middle">0868AT43A0020 (DNP)</text>
+<text x="1080.0" y="205" font-size="11" text-anchor="middle">+ U.FL test port</text>
+<rect x="680" y="300" width="250" height="120" rx="6" fill="#eeca3b" fill-opacity="0.25" stroke="#eeca3b" stroke-width="2"/>
+<text x="805.0" y="322" font-size="14" font-weight="bold" text-anchor="middle">TRF7970A NFC/RFID</text>
+<text x="805.0" y="340" font-size="11" text-anchor="middle">ISO 14443 A/B, 15693, FeliCa</text>
+<text x="805.0" y="355" font-size="11" text-anchor="middle">(NFC-F 212/424)</text>
+<text x="805.0" y="370" font-size="11" text-anchor="middle">under shield can</text>
+<rect x="990" y="320" width="180" height="80" rx="6" fill="#f2cf5b" fill-opacity="0.25" stroke="#f2cf5b" stroke-width="2"/>
+<text x="1080.0" y="342" font-size="14" font-weight="bold" text-anchor="middle">NFC PCB coil</text>
+<text x="1080.0" y="360" font-size="11" text-anchor="middle">28 x 16 mm window</text>
+<rect x="680" y="480" width="250" height="120" rx="6" fill="#e377c2" fill-opacity="0.25" stroke="#e377c2" stroke-width="2"/>
+<text x="805.0" y="502" font-size="14" font-weight="bold" text-anchor="middle">IR optical front end</text>
+<text x="805.0" y="520" font-size="11" text-anchor="middle">VSMB10940 940 nm LED + MOSFET</text>
+<text x="805.0" y="535" font-size="11" text-anchor="middle">VEMD10940F + OPA356 TIA</text>
+<text x="805.0" y="550" font-size="11" text-anchor="middle">(Pricer IR, 1.25 MHz carrier [S])</text>
+<line x1="230" y1="125" x2="330" y2="290" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="284.0" y="202.5" font-size="11">VBUS / D+ D-</text>
+<line x1="130" y1="180" x2="130" y2="230" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="134.0" y="200.0" font-size="11">5 V</text>
+<line x1="130" y1="400" x2="130" y2="350" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="134.0" y="370.0" font-size="11">VBAT</text>
+<line x1="230" y1="290" x2="330" y2="300" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="284.0" y="290.0" font-size="11">3V3</text>
+<line x1="445" y1="230" x2="445" y2="180" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="449.0" y="200.0" font-size="11">WDI, ARM, EN</text>
+<line x1="560" y1="110" x2="680" y2="110" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="565" y="100" font-size="11">3V3_RF (gated)</text>
+<line x1="560" y1="300" x2="680" y2="215" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="585" y="275" font-size="11">UART [A]</text>
+<line x1="560" y1="350" x2="680" y2="350" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="624.0" y="345.0" font-size="11">SPI (shared)</text>
+<line x1="445" y1="380" x2="445" y2="440" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="449.0" y="405.0" font-size="11">SPI (shared)</text>
+<polyline points="330,625 305,625 305,340 322,340" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="240" y="560" font-size="11">I2C + INT</text>
+<line x1="930" y1="110" x2="990" y2="90" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="930" y1="180" x2="990" y2="190" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="930" y1="360" x2="990" y2="360" stroke="#333" stroke-width="1.6" marker-end="url(#a)" marker-start="url(#a)"/>
+<polyline points="930,225 955,225 955,540 938,540" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="960" y="470" font-size="11">IR TX/RX timing</text>
+<text x="30" y="730" font-size="12">No plug-in RF modules or RF expansion connectors. All RF transceivers, matching, test ports and antennas are on the single 80 x 50 mm 4-layer PCB. Transmit paths are powered only through the hardware interlock.</text>
+</svg>

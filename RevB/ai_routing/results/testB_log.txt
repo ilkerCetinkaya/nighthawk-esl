@@ -1,0 +1,16 @@
+[kicad registration pending, retry 0]
+[kicad registration pending, retry 1]
+[kicad registration pending, retry 2]
+[kicad registration pending, retry 3]
+[kicad registration pending, retry 4]
+[kicad registration pending, retry 5]
+[kicad registration pending, retry 6]
+[kicad registration pending, retry 7]
+[kicad registration pending, retry 8]
+[kicad registration pending, retry 9]
+[kicad registration pending, retry 10]
+[kicad registration pending, retry 11]
+[kicad registration pending, retry 12]
+[kicad registration pending, retry 13]
+[kicad route_autoroute_freerouting] Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+seconds 546.3

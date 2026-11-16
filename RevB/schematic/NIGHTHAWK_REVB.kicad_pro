@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "filename": "NIGHTHAWK_REVB.kicad_pro",
+    "version": 3
+  },
+  "schematic": {
+    "drawing": {
+      "default_line_thickness": 6.0
+    }
+  }
+}

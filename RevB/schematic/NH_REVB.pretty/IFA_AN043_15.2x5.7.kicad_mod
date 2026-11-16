@@ -1,0 +1,227 @@
+(footprint "IFA_AN043_15.2x5.7"
+	(version 20260206)
+	(generator "nighthawk_revb")
+	(layer "F.Cu")
+	(descr "TI AN043 (SWRA117D) figure 3 / table 1: 15.2 x 5.7 mm inverted-F antenna. Dimensions L1 3.94 L2 2.70 L3 5.00 L4 2.64 L5 2.00 L6 4.90 W1 0.90 W2 0.50 D1 0.50 D2 0.30 D3 0.30 D4 0.50 D5 1.40 D6 1.70 mm, reconstructed from the figure (sums check to 15.2 and 5.7). Origin = feed pad 1 centre. Pad 2 = short-stub via to ground. Layer-2 ground edge must end 0.5 mm above the box bottom; no copper elsewhere on any layer inside the box. Reference PCB thickness unknown.")
+	(property "Reference" "REF**"
+		(at 0 -3.50 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "IFA_AN043_15.2x5.7"
+		(at 0 3.50 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(net_tie_pad_groups "1, 2")
+	(fp_poly
+		(pts
+			(xy -2.550 -5.150)
+			(xy 2.450 -5.150)
+			(xy 2.450 -4.650)
+			(xy -2.550 -4.650)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy -2.550 -4.650)
+			(xy -1.650 -4.650)
+			(xy -1.650 0.250)
+			(xy -2.550 0.250)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy -0.250 -4.650)
+			(xy 0.250 -4.650)
+			(xy 0.250 0.250)
+			(xy -0.250 0.250)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 1.950 -4.650)
+			(xy 2.450 -4.650)
+			(xy 2.450 -2.010)
+			(xy 1.950 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 1.950 -2.510)
+			(xy 4.950 -2.510)
+			(xy 4.950 -2.010)
+			(xy 1.950 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 4.450 -5.150)
+			(xy 4.950 -5.150)
+			(xy 4.950 -2.010)
+			(xy 4.450 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 4.450 -5.150)
+			(xy 7.150 -5.150)
+			(xy 7.150 -4.650)
+			(xy 4.450 -4.650)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 6.650 -4.650)
+			(xy 7.150 -4.650)
+			(xy 7.150 -2.010)
+			(xy 6.650 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 6.650 -2.510)
+			(xy 9.650 -2.510)
+			(xy 9.650 -2.010)
+			(xy 6.650 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 9.150 -5.150)
+			(xy 9.650 -5.150)
+			(xy 9.650 -2.010)
+			(xy 9.150 -2.010)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 9.150 -5.150)
+			(xy 11.850 -5.150)
+			(xy 11.850 -4.650)
+			(xy 9.150 -4.650)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(fp_poly
+		(pts
+			(xy 11.350 -4.650)
+			(xy 11.850 -4.650)
+			(xy 11.850 -0.710)
+			(xy 11.350 -0.710)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Cu")
+	)
+	(pad "1" smd rect
+		(at 0.000 0.000)
+		(size 0.500 0.500)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "2" thru_hole circle
+		(at -2.100 -0.100)
+		(size 0.6 0.6)
+		(drill 0.3)
+		(layers "*.Cu" "*.Mask")
+	)
+	(fp_rect
+		(start -3.050 -5.450)
+		(end 12.150 0.250)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+	)
+	(fp_rect
+		(start -3.250 -5.650)
+		(end 12.350 0.450)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+)

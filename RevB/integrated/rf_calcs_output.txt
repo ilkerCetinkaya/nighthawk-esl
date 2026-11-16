@@ -1,0 +1,82 @@
+=== CC1352R proprietary PHY ranges (TRM SWCU185G, Eq. 15 and Table 25-175/25-183) ===
+symbol rate: fbaud = R * 48 MHz / (p * 2^21); R is 21 bits (1..2097151), p 4..255
+  R= 2097151 p=  4:  11999.994 kBaud
+  R=  350000 p=  4:   2002.716 kBaud
+  R=  170000 p=  4:    972.748 kBaud
+  R=  100000 p=  8:    286.102 kBaud
+  R=       1 p=255:      0.000 kBaud
+  (the formula range is wider than the characterised range; datasheet characterises specific rates only)
+deviation: 11-bit field (0..2047) x step {15.625, 62.5, 250, 1000} Hz
+  step  15.625 Hz: max     32.0 kHz, resolution 15.625 Hz
+  step    62.5 Hz: max    127.9 kHz, resolution 62.5 Hz
+  step     250 Hz: max    511.8 kHz, resolution 250 Hz
+  step    1000 Hz: max   2047.0 kHz, resolution 1000 Hz
+frequency: CMD_FS integer MHz + fractFreq/65536 MHz -> programming step 15.259 Hz
+channel spacing 500 kHz = 32768 fractFreq counts: exactly representable
+  Hanshow-style grid ch  0:  2402.0 MHz -> frequency=2402, fractFreq=0
+  Hanshow-style grid ch  1:  2402.5 MHz -> frequency=2402, fractFreq=32768
+  Hanshow-style grid ch  2:  2403.0 MHz -> frequency=2403, fractFreq=0
+  Hanshow-style grid ch 78:  2441.0 MHz -> frequency=2441, fractFreq=0
+  Hanshow-style grid ch156:  2480.0 MHz -> frequency=2480, fractFreq=0
+
+RX bandwidth settings available at 2432 MHz (TRM Table 25-183, enhanced mode), selected rows:
+  setting 84: 153.1 kHz
+  setting 85: 174.2 kHz
+  setting 86: 219.6 kHz
+  setting 87: 263.9 kHz
+  setting 88: 306.1 kHz
+  setting 89: 348.3 kHz
+  setting 90: 439.1 kHz
+  setting 91: 527.8 kHz
+  setting 92: 612.2 kHz
+  setting 93: 696.7 kHz
+  setting 94: 878.2 kHz
+  setting 95: 1055.6 kHz
+  setting 96: 1224.4 kHz
+  setting 97: 1393.3 kHz
+  setting 98: 1756.4 kHz
+  setting 99: 2111.1 kHz
+  Hanshow 20 dB bandwidth 558-591 kHz [FCC test report]; SoluM 6 dB 708 kHz, 99% 1.05-1.06 MHz [FCC test report]
+
+=== IR LED driver (VSMB10940, AO3400A) ===
+  R=12 ohm: I_pk =  145.8 mA, LED pulse power  218.7 mW, resistor pulse power  255.2 mW
+  R=13 ohm: I_pk =  134.6 mA, LED pulse power  201.9 mW, resistor pulse power  235.6 mW
+  R=15 ohm: I_pk =  116.7 mA, LED pulse power  175.0 mW, resistor pulse power  204.2 mW
+  R=18 ohm: I_pk =   97.2 mA, LED pulse power  145.8 mW, resistor pulse power  170.1 mW
+  R=22 ohm: I_pk =   79.5 mA, LED pulse power  119.3 mW, resistor pulse power  139.2 mW
+chosen R=15 ohm: I_pk (VF 1.55 V) = 113 mA  (datasheet: IFM 130 mA at tp/T 0.5, tp 100 us; IFSM 500 mA at tp 100 us)
+carrier 1.25 MHz square: pulse width 400 ns, period 800 ns
+  burst 40 us every 61 us -> duty 32.8 %, I_avg  37.2 mA, P_avg  55.7 mW, dTj 25.1 K (RthJA 450 K/W), PV limit 104 mW
+  burst 40 us every 150 us -> duty 13.3 %, I_avg  15.1 mA, P_avg  22.7 mW, dTj 10.2 K (RthJA 450 K/W), PV limit 104 mW
+  burst 40 us every 284 us -> duty 7.0 %, I_avg   8.0 mA, P_avg  12.0 mW, dTj  5.4 K (RthJA 450 K/W), PV limit 104 mW
+  worst case continuous 1.25 MHz carrier: P = 85 mW vs PV 104 mW, dTj = 38 K -> Tj = 63 C vs 100 C limit at 25 C ambient: needs a firmware limit on burst length and duty
+MOSFET AO3400A [DS]: Vgs(th) 0.65-1.45 V, Qg 6-7 nC (Vgs 4.5 V), Ciss 630 pF
+  gate drive charge current at 1.25 MHz: 8.7 mA average; with 100 ohm gate resistor tau = 63 ns (vs 400 ns pulse)
+  gate drive from a CC1352 DIO at 3.3 V: Vgs = 3.3 V is above Vth max 1.45 V; RDS(on) at 2.5-4.5 V is in the datasheet curves (numbers not extracted) -> assumed <= 0.1 ohm, drop 11 mV
+
+=== IR photodiode TIA (VEMD10940F, OPA356) ===
+  Rf=  4.7k Cin=8pF Cf=1.0pF: -3dB  33.86 MHz, Cf_min(stability est.) 1.16 pF, ok=False, Rf noise 10.93 nA rms, 1 uA -> 5 mV
+  Rf=  4.7k Cin=8pF Cf=1.5pF: -3dB  22.58 MHz, Cf_min(stability est.) 1.16 pF, ok=True, Rf noise  8.92 nA rms, 1 uA -> 5 mV
+  Rf=  4.7k Cin=8pF Cf=2.2pF: -3dB  15.39 MHz, Cf_min(stability est.) 1.16 pF, ok=True, Rf noise  7.37 nA rms, 1 uA -> 5 mV
+  Rf= 10.0k Cin=8pF Cf=1.0pF: -3dB  15.92 MHz, Cf_min(stability est.) 0.80 pF, ok=True, Rf noise  5.14 nA rms, 1 uA -> 10 mV
+  Rf= 10.0k Cin=8pF Cf=1.5pF: -3dB  10.61 MHz, Cf_min(stability est.) 0.80 pF, ok=True, Rf noise  4.19 nA rms, 1 uA -> 10 mV
+  Rf= 10.0k Cin=8pF Cf=2.2pF: -3dB   7.23 MHz, Cf_min(stability est.) 0.80 pF, ok=True, Rf noise  3.46 nA rms, 1 uA -> 10 mV
+  Rf= 22.0k Cin=8pF Cf=1.0pF: -3dB   7.23 MHz, Cf_min(stability est.) 0.54 pF, ok=True, Rf noise  2.33 nA rms, 1 uA -> 22 mV
+  Rf= 22.0k Cin=8pF Cf=1.5pF: -3dB   4.82 MHz, Cf_min(stability est.) 0.54 pF, ok=True, Rf noise  1.91 nA rms, 1 uA -> 22 mV
+  Rf= 22.0k Cin=8pF Cf=2.2pF: -3dB   3.29 MHz, Cf_min(stability est.) 0.54 pF, ok=True, Rf noise  1.57 nA rms, 1 uA -> 22 mV
+  Rf= 47.0k Cin=8pF Cf=1.0pF: -3dB   3.39 MHz, Cf_min(stability est.) 0.37 pF, ok=True, Rf noise  1.09 nA rms, 1 uA -> 47 mV
+  Rf= 47.0k Cin=8pF Cf=1.5pF: -3dB   2.26 MHz, Cf_min(stability est.) 0.37 pF, ok=True, Rf noise  0.89 nA rms, 1 uA -> 47 mV
+  Rf= 47.0k Cin=8pF Cf=2.2pF: -3dB   1.54 MHz, Cf_min(stability est.) 0.37 pF, ok=True, Rf noise  0.74 nA rms, 1 uA -> 47 mV
+  VEMD10940F [DS]: CD 1.3 pF at 5 V (0 V value garbled in extraction), tr 100 ns (RL 1 kohm), Ira 234 uA at 1 mW/cm2 / 950 nm / 5 V
+  required signal bandwidth >= 1.25 MHz carrier +/- 10 kHz passband (Furrtek [S]); a 100 ns rise time corresponds to about 3.5 MHz [CALC]
+  irradiance of a real Pricer transmitter at 1-3 m is unknown [U]: sensitivity and range cannot be computed
+
+=== NFC coil tank (24 x 12 mm was assumed; this layout reserves 28 x 16 mm) ===
+  28x16 mm, 2 turns: L ~ 0.216 uH, resonating C =    637 pF, trace 176 mm, R_dc ~ 0.17 ohm, unloaded Q ~ 109
+  28x16 mm, 3 turns: L ~ 0.379 uH, resonating C =    363 pF, trace 264 mm, R_dc ~ 0.25 ohm, unloaded Q ~ 128
+  28x16 mm, 4 turns: L ~ 0.543 uH, resonating C =    254 pF, trace 352 mm, R_dc ~ 0.34 ohm, unloaded Q ~ 137
+  24x12 mm, 2 turns: L ~ 0.161 uH, resonating C =    855 pF, trace 144 mm, R_dc ~ 0.14 ohm, unloaded Q ~ 99
+  24x12 mm, 3 turns: L ~ 0.272 uH, resonating C =    507 pF, trace 216 mm, R_dc ~ 0.21 ohm, unloaded Q ~ 112
+  24x12 mm, 4 turns: L ~ 0.373 uH, resonating C =    370 pF, trace 288 mm, R_dc ~ 0.28 ohm, unloaded Q ~ 115
+  ISO 14443 needs a loaded Q low enough for ~ MHz-wide sidebands (loaded Q about 10-30 [A]); a damping resistor in the tank is required (TI reference uses 680 ohm, Fig. 7-1)
+  TI reference tank values (Fig. 7-1, for a 0.95 uH antenna): C23 68 pF series, C24 82 pF shunt, R6 680 ohm, optional C27 1 pF / C28 2 pF: NOT directly reusable for 0.3 uH

@@ -1,0 +1,172 @@
+(footprint "HRO_TYPE-C-31-M-12_DS"
+	(version 20260206)
+	(generator "nighthawk_revb")
+	(layer "F.Cu")
+	(descr "HRO TYPE-C-31-M-12 (LCSC C165948) built from the manufacturer's recommended PCB layout (drawing 2020.12.08): pad row centre 6.86 mm from the PCB edge, pads 1.14 long, 4 x 0.60 and 8 x 0.30 wide, positioning holes 0.6 at +-2.89 / 5.79 from the edge, shell slots at +-4.325 (upper 0.9x2.0 pad, 0.6x1.7 hole, 6.35 from the edge; lower 0.9x1.7 pad, 0.6x1.4 hole, 2.09 from the edge). Origin = connector centre on the PCB edge line (Dwgs.User). Shell front outline (0.83 mm beyond the edge) is NOT from the drawing: 7.35 mm depth from the drawing, back edge position assumed.")
+	(property "Reference" "REF**"
+		(at 0 -8.50 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "HRO_TYPE-C-31-M-12_DS"
+		(at 0 8.50 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(pad "A1" smd rect
+		(at -3.200 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B12" smd rect
+		(at -3.200 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A4" smd rect
+		(at -2.400 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B9" smd rect
+		(at -2.400 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B8" smd rect
+		(at -1.750 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A5" smd rect
+		(at -1.250 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B7" smd rect
+		(at -0.750 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A6" smd rect
+		(at -0.250 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A7" smd rect
+		(at 0.250 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B6" smd rect
+		(at 0.750 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A8" smd rect
+		(at 1.250 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B5" smd rect
+		(at 1.750 -6.860)
+		(size 0.300 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B4" smd rect
+		(at 2.400 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A9" smd rect
+		(at 2.400 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "B1" smd rect
+		(at 3.200 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "A12" smd rect
+		(at 3.200 -6.860)
+		(size 0.600 1.140)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+	)
+	(pad "SH" thru_hole oval
+		(at -4.325 -6.350)
+		(size 0.9 2.0)
+		(drill oval 0.6 1.7)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at -4.325 -2.090)
+		(size 0.9 1.7)
+		(drill oval 0.6 1.4)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "" np_thru_hole circle
+		(at -2.890 -5.790)
+		(size 0.6 0.6)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at 4.325 -6.350)
+		(size 0.9 2.0)
+		(drill oval 0.6 1.7)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "SH" thru_hole oval
+		(at 4.325 -2.090)
+		(size 0.9 1.7)
+		(drill oval 0.6 1.4)
+		(layers "*.Cu" "*.Mask")
+	)
+	(pad "" np_thru_hole circle
+		(at 2.890 -5.790)
+		(size 0.6 0.6)
+		(drill 0.6)
+		(layers "*.Cu" "*.Mask")
+	)
+	(fp_rect
+		(start -4.470 -6.520)
+		(end 4.470 0.830)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_rect
+		(start -4.700 -7.800)
+		(end 4.700 1.050)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(fp_line
+		(start -4.800 0.000)
+		(end 4.800 0.000)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+	)
+)

@@ -1,0 +1,32 @@
+Executing action: all (aliases: build)
+Running ninja in directory /private/tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild
+Executing "ninja all"...
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/bootloader/esp-idf/esptool_py && /Users/ilkercetinkaya/.espressif/python_env/idf5.4_py3.11_env/bin/python /Users/ilkercetinkaya/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/bootloader/bootloader.bin
+Bootloader binary size 0x5120 bytes. 0x2ee0 bytes (37%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] Building C object esp-idf/src/CMakeFiles/__idf_src.dir/main.c.obj
+[5/12] Building C object esp-idf/src/CMakeFiles/__idf_src.dir/interlock.c.obj
+[6/12] Building C object esp-idf/src/CMakeFiles/__idf_src.dir/supervisor_core.c.obj
+[7/12] Building C object esp-idf/src/CMakeFiles/__idf_src.dir/cli.c.obj
+[8/12] Linking C static library esp-idf/src/libsrc.a
+[9/12] Generating ld/sections.ld
+[10/12] Linking CXX executable nighthawk.elf
+[11/12] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/nighthawk.bin
+[12/12] cd /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/esp-idf/esptool_py && /Users/ilkercetinkaya/.espressif/python_env/idf5.4_py3.11_env/bin/python /Users/ilkercetinkaya/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/partition_table/partition-table.bin /tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/nighthawk.bin
+nighthawk.bin binary size 0x58530 bytes. Smallest app partition is 0x100000 bytes. 0xa7ad0 bytes (65%) free.
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32c3 -b 460800 --before default_reset --after hard_reset --no-stub write_flash --flash_mode dio --flash_size 4MB --flash_freq 80m 0x0 ../../../../../../private/tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/bootloader/bootloader.bin 0x8000 ../../../../../../private/tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/partition_table/partition-table.bin 0x10000 ../../../../../../private/tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild/nighthawk.bin
+or from the "/private/tmp/claude-501/-Users-ilkercetinkaya--claude-spares-spare-ROyhyc/55804e2a-8e79-433d-bff1-f655136cefc8/scratchpad/fwbuild" directory
+ python -m esptool --chip esp32c3 -b 460800 --before default_reset --after hard_reset --no-stub write_flash "@flash_args"

@@ -1,0 +1,110 @@
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T21:25:57.361433Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=experimental profile=builder project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T21:25:57.362838Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=experimental profile=builder request_id=None tool=None transport=stdio ts=2026-11-08T21:25:57.363413Z version=4.9.0
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_export_dsn ts=2026-11-08T21:26:02.882759Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_export_dsn ts=2026-11-08T21:26:32.885756Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=30006.423 mcp_session_id=None request_id=None status=error tool=route_export_dsn ts=2026-11-08T21:26:32.888813Z
+Tool 'route_export_dsn' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[kicad registration pending, retry 0]
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_export_dsn ts=2026-11-08T21:27:06.757390Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_export_dsn ts=2026-11-08T21:27:36.760282Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=30005.628 mcp_session_id=None request_id=None status=error tool=route_export_dsn ts=2026-11-08T21:27:36.762631Z
+Tool 'route_export_dsn' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[kicad registration pending, retry 1]
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_export_dsn ts=2026-11-08T21:28:06.788708Z
+Tool already exists: sch_annotate
+Tool already exists: sch_annotate
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=None latency_ms=19757.309 mcp_session_id=None request_id=None status=ok tool=route_export_dsn ts=2026-11-08T21:28:26.545665Z
+[kicad route_export_dsn] {
+  "ok": false,
+  "changed": false,
+  "dry_run": false,
+  "warnings": [],
+  "errors": [
+    "Headless Specctra DSN export is not available from this KiCad CLI (/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli). In KiCad's PCB Editor run File > Export > Specctra DSN and save it to /Users/ilker

@@ -1,0 +1,30 @@
+** Drc report for NIGHTHAWK.kicad_pcb **
+** Created on 2026-11-07T13:15:38 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 3 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(102.0000 mm, 180.0000 mm): Segment on Edge.Cuts
+    @(119.3000 mm, 178.1000 mm): Segment of J1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(102.0000 mm, 180.0000 mm): Segment on Edge.Cuts
+    @(119.3000 mm, 180.0000 mm): Segment of J1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(102.0000 mm, 180.0000 mm): Segment on Edge.Cuts
+    @(128.7000 mm, 178.1000 mm): Segment of J1 on F.Silkscreen
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

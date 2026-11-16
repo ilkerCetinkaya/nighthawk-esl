@@ -1,0 +1,15 @@
+IR LED pulse current and thermal (VSMB10940, AO3400A, 3.3 V, Rled 20 ohm, 1.25 MHz carrier, 50 % duty)
+  Vf at pulse peak (interpolated between datasheet points 1.35 V @65 mA and 1.8 V @500 mA): 1.37 V  [CALC]
+  peak current IF_pk = 96 mA (limit IFM 130 mA at tp/T 0.5: margin 1.35x)  [CALC]
+  carrier-averaged LED current = 48 mA (limit continuous IF 65 mA: margin 1.35x)  [CALC]
+  LED average power = 66 mW (PV max 104 mW: margin 1.58x)  [CALC]
+  LED self-heating at 100 % burst duty = 30 K (RthJA 450 K/W) -> maximum ambient for Tj 100 C = 70 C  [CALC]
+  current-limit resistor dissipation = 93 mW average (0805 needs a 0.25 W part; 0.125 W part would be at 74 % load)  [CALC]
+AO3400A gate drive and losses
+  gate time constant (driver 33 ohm + Rg 22 + internal 3.0) x (Ciss + 4 Crss) = 48 ns; 10-90 % gate rise about 106 ns vs half period 400 ns  [CALC, driver 33 ohm assumed from VOH 2.2 V at 24 mA]
+  direct drive from a CC1352R pin (about 8 mA): gate charging time = Qg*Vgs-based 639 ns for the charge alone, not acceptable  [CALC]
+  gate charge power = 21.2 mW (Qg scaled to 3.3 V) / CV^2f = 9.3 mW, dissipated in the driver and Rg  [CALC]
+  conduction loss = 148 uW, switching loss (linear crossing, 37 ns) = 14.7 mW  [CALC]
+  MOSFET self-heating = 1.86 K at RthJA 125 K/W; Tj at 85 C ambient = 86.9 C (limit 150 C)  [CALC]
+  Vgs 3.3 V is above the 2.5 V RDS(on) test point (max 48 mOhm) and 2.3x the Vgs(th) max 1.45 V  [DS]
+Not verified: Vf spread with temperature, real driver output impedance, layout parasitics, ringing. All [A] until measured.

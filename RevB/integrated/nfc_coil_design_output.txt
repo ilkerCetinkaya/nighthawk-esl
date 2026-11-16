@@ -1,0 +1,16 @@
+validation against TI SLOA241C example: L 1.35 uH, R 0.754 ohm, X 115 ohm; TI final Cp 47 pF, Rp 700 ohm, Cs 68 pF (simulated start Cp 43, Rp 800, Cs 63)
+  solver Rp 700: Cp 40.5 pF, Cs 66.5 pF (L from X=115: 1.35 uH)
+  solver Rp 800: Cp 44.0 pF, Cs 62.1 pF (L from X=115: 1.35 uH)
+
+A 18x16, 6 turns, 0.25/0.10 mm, F.Cu only (selected) L 1.43 uH R 0.92 Q0 133
+   target Q 7: Rp 854 ohm, Cp 39.7 pF, Cs 60.1 pF, -10 dB RL bandwidth 1.39 MHz
+   target Q 9: Rp 1099 ohm, Cp 45.7 pF, Cs 53.1 pF, -10 dB RL bandwidth 1.09 MHz
+B 18x16, 3+3 turns F+B, 0.25/0.10 L 1.56 uH R 0.98 Q0 135
+   target Q 7: Rp 933 ohm, Cp 33.9 pF, Cs 57.4 pF, -10 dB RL bandwidth 1.38 MHz
+   target Q 9: Rp 1200 ohm, Cp 39.7 pF, Cs 50.6 pF, -10 dB RL bandwidth 1.08 MHz
+C 20x16, 6 turns, 0.3/0.15 L 1.40 uH R 0.79 Q0 151
+   target Q 7: Rp 836 ohm, Cp 41.4 pF, Cs 60.6 pF, -10 dB RL bandwidth 1.38 MHz
+   target Q 9: Rp 1075 ohm, Cp 47.4 pF, Cs 53.4 pF, -10 dB RL bandwidth 1.08 MHz
+old 28x16 3 turns (previous estimate) L 0.54 uH R 0.65 Q0 72
+   target Q 7: Rp 324 ohm, Cp 165.7 pF, Cs 106.1 pF, -10 dB RL bandwidth 1.49 MHz
+   target Q 9: Rp 416 ohm, Cp 173.5 pF, Cs 92.8 pF, -10 dB RL bandwidth 1.17 MHz

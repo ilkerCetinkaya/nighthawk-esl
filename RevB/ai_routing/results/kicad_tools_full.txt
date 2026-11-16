@@ -1,0 +1,333 @@
+332 tools
+kicad_list_tool_categories - List all available tool categories and capabilities. This KiCad MCP Pro tool supports production EDA automatio
+kicad_get_tools_in_category - Get tool names in a category, optionally filtered by maturity.
+kicad_set_project - Set the active KiCad project directory and file paths. This KiCad MCP Pro tool supports production EDA automat
+kicad_get_project_info - Show the currently configured KiCad project paths. This KiCad MCP Pro tool supports production EDA automation 
+project_design_workflow - Return the professional PCB design workflow as a typed phase state machine.
+project_set_design_intent - Persist high-level project design intent and structural group constraints.
+project_import_design_spec - Import structured product/spec text into ProjectDesignIntent conservatively.
+project_get_design_intent - Show the persisted project design intent used by placement and release gates.
+project_get_design_spec - Return the resolved project design spec with explicit and inferred fields.
+project_infer_design_spec - Infer a design spec from the active PCB without writing it to disk.
+project_validate_design_spec - Validate the resolved design spec against the active project PCB.
+project_generate_design_prompt - Generate a professional workflow prompt tailored to the resolved project spec.
+project_assess_edit_impact - Scope re-validation after an edit: semantic-diff the design intent and report
+project_revalidate_after_edit - Re-run only the gates an edit could have invalidated; prove the rest preserved.
+project_get_next_action - Return the next high-priority action derived from the current project gate.
+project_auto_fix_loop - Run the project quality gate and automatically apply server-side fixes.
+project_full_validation_loop - Run ERC/DRC/project gates in a bounded fix-and-rerun validation loop.
+project_gate_trend - Return persisted quality-gate trend history for one gate. This KiCad MCP Pro tool supports production EDA auto
+project_design_report - Generate a comprehensive design-status report.
+kicad_list_recent_projects - List recently opened KiCad projects from KiCad's config files. This KiCad MCP Pro tool supports production EDA
+kicad_scan_directory - Scan a directory and report any KiCad project files it contains.
+kicad_create_new_project - Create a new minimal KiCad project structure and activate it.
+kicad_get_version - Get KiCad version information and current connection status. This KiCad MCP Pro tool supports production EDA a
+kicad_help - Show a concise startup guide and all tool categories. This KiCad MCP Pro tool supports production EDA automati
+kicad_capability_parity - Report how much of KiCad's programmatic surface this server can drive.
+project_list_embedded_files - List all embedded (project-embedded) files in the active project.
+project_embed_file - Embed an external file into the KiCad project as project metadata.
+project_extract_embedded_file - Extract an embedded file from the project and write it to disk.
+project_remove_embedded_file - Remove an embedded file entry from the project metadata.
+pcb_get_board_summary - Summarize the current board. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clie
+pcb_get_vias - List board vias. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_footprints - List board footprints. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_footprint_layers - List every layer referenced by a footprint block, including inner layers.
+pcb_visual_qa - Headless PCB readability QA: off-board parts, silk and body overlap.
+pcb_get_nets - List all board nets. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_layers - List enabled board layers. This KiCad MCP Pro tool supports production EDA automation workflows for MCP client
+pcb_get_stackup - Show the current stackup. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients
+pcb_get_impedance_for_trace - Estimate trace impedance for the supplied width on the named stackup layer.
+pcb_check_creepage_clearance - Run a heuristic creepage clearance review against pad spacing. This KiCad MCP Pro tool supports production EDA
+pcb_get_selection - List currently selected items in the PCB editor. This KiCad MCP Pro tool supports production EDA automation wo
+pcb_get_board_as_string - Return the current board as a bounded S-expression string.
+pcb_get_ratsnest - Report currently unconnected board items using the latest DRC view.
+pcb_get_design_rules - Read the active board design rules file when available. This KiCad MCP Pro tool supports production EDA automa
+pcb_block_list - List stored PCB design blocks created from selected footprints. This KiCad MCP Pro tool supports production ED
+pcb_get_live_edit_state - Return sanitized native-live PCB transaction state as deterministic JSON.
+pcb_get_groups - List board groups (KiCad 10.0.0+).
+pcb_get_origin - Get the current board origin (drill origin) in millimeters.
+pcb_critique_placement - Analyse PCB component placement for common design-quality issues.
+pcb_get_net_statistics - Return statistical data about all nets in the active PCB.
+pcb_net_inspector - Inspect every detail about a specific net in the PCB.
+pcb_add_test_point - Register a test-point assignment for a net.
+pcb_list_test_points - List all registered test points for the active project. This KiCad MCP Pro tool supports production EDA automa
+pcb_optimize_test_point_placement - Suggest optimal positions for test points on each registered net.
+pcb_check_test_coverage - Calculate test-point coverage: how many nets have test points assigned.
+sch_get_symbols - List all schematic symbols, optionally from a child sheet. This KiCad MCP Pro tool supports production EDA aut
+sch_get_wires - List all wires in the schematic, optionally from a child sheet.
+sch_get_labels - List all labels in the schematic, optionally from a child sheet.
+sch_get_net_names - List unique net names derived from labels, optionally from a child sheet.
+sch_get_population_status - Report native KiCad Populate/DNP status for schematic components.
+sch_get_pin_positions - Calculate absolute pin positions for a given symbol placement. This KiCad MCP Pro tool supports production EDA
+sch_check_power_flags - Check whether common power nets appear to be flagged. This KiCad MCP Pro tool supports production EDA automati
+sch_get_bounding_boxes - Return the estimated bounding box of every symbol in the active schematic.
+sch_find_free_placement - Find N collision-free placement coordinates for new symbols.
+sch_set_title_block_info - Set schematic title block fields on the root sheet or a child sheet.
+sch_set_sheet_size - Change the schematic sheet (paper) size.
+sch_auto_resize_sheet - Automatically grow the sheet to fit all currently placed symbols.
+sch_list_templates - List all available reference subcircuit templates.
+sch_get_template_info - Return full details for a subcircuit template.
+sch_instantiate_template - Instantiate a subcircuit template — returns a structured action plan.
+sch_get_circuit_ir - Return the semantic circuit IR for the active schematic.
+sch_analyze_net_compilation - Preview how netlist-aware schematic compilation will resolve endpoints and wires.
+sch_build_circuit - Build (overwrite) the active schematic from structured symbol, wire, and label inputs.
+sch_live_preview - Poll a safe live schematic preview state and refresh rendered output on changes.
+sch_render_png - Render a schematic sheet to PNG for visual self-checks.
+sch_render_visual_diff - Render the exact visual delta produced by the last schematic mutation.
+sch_list_sheets - List child sheets from the active top-level schematic. This KiCad MCP Pro tool supports production EDA automat
+sch_get_sheet_info - Return metadata for a specific child sheet. This KiCad MCP Pro tool supports production EDA automation workflo
+sch_list_sheet_pins - List the hierarchical sheet pins of one child sheet symbol.
+sch_get_connectivity_graph - Summarize the active schematic as a textual net connectivity graph.
+sch_trace_net - Trace a named net through the active schematic and matching child sheets.
+sch_update_properties - Update a property on a placed symbol. This KiCad MCP Pro tool supports production EDA automation workflows for
+sch_set_dnp - Set KiCad's native Do Not Populate flag on a placed symbol.
+sch_modify_property - Modify a schematic symbol property by reference. This KiCad MCP Pro tool supports production EDA automation wo
+sch_move_symbol - Move an existing symbol instance to a new absolute coordinate.
+sch_delete_wire - Remove a specific wire segment using its UUID or unique UUID prefix.
+sch_delete_symbol - Remove a placed symbol and any directly attached wire segments.
+sch_delete_label - Delete label(s) (local/global/hierarchical) matching ``name`` at the
+sch_delete_no_connect - Delete the no-connect marker(s) at the given coordinate.
+sch_move_label - Move the label matching ``name`` at (x_mm, y_mm) to a new coordinate,
+sch_modify_label - Set the text justification of an existing label (local/global/
+sch_add_symbol - Add a schematic symbol at an absolute coordinate.
+sch_add_component - Add a schematic component through the hybrid IPC reload path.
+sch_add_wire - Add a schematic wire, snapping endpoints to the 1.27 mm / 50 mil grid by default.
+sch_add_label - Add a schematic label, snapping its anchor to the 1.27 mm / 50 mil grid by default.
+sch_add_power_symbol - Add a power symbol, snapping its anchor to the 1.27 mm / 50 mil grid by default.
+sch_add_bus - Add a schematic bus, snapping endpoints to the 1.27 mm / 50 mil grid by default.
+sch_add_bus_wire_entry - Add a bus wire entry marker.
+sch_add_no_connect - Add a no-connect marker, snapping it to the 1.27 mm / 50 mil grid by default.
+sch_add_labels - Place many labels in one call, snapping each to the 1.27 mm / 50 mil grid.
+sch_set_hop_over - Toggle KiCad 10 hop-over display in the active project settings.
+sch_list_swappable_pins - List candidate pins and units that can participate in a swap workflow.
+sch_swap_pins - Record a pin-swap back-annotation intent for a component.
+sch_swap_gates - Record a gate-swap back-annotation intent for a multi-unit component.
+sch_create_sheet - Create a child schematic sheet and add it to the active top-level schematic.
+sch_move_sheet - Move the hierarchical sheet named ``name`` (its ``Sheetname``) to a new anchor.
+sch_delete_sheet - Remove the hierarchical sheet named ``name`` (its ``Sheetname``) from the parent.
+sch_add_hierarchical_label - Add a hierarchical label, preserving the requested shape and rotation.
+sch_add_global_label - Add a global label, preserving the requested shape and rotation.
+sch_add_sheet_pin - Add one hierarchical sheet pin to a sheet symbol at an explicit position.
+sch_import_sheet_pins - Mirror each child sheet's hierarchical labels as pins on its sheet symbol.
+sch_spread_sheets - Move sheet-symbol columns apart to make room for stub-and-label wiring.
+sch_wire_sheet_pins - Connect sheet pins by giving each one a wire stub and a local label.
+sch_add_pin_labels - Connect placed-symbol pins to nets with a short outward wire stub plus a
+sch_route_wire_between_pins - Route deterministic Manhattan wire segments between two placed symbol pins.
+sch_add_missing_junctions - Insert missing schematic junctions at T-intersection wire endpoints. This KiCad MCP Pro tool supports producti
+sch_add_jumper - Add a jumper symbol to the schematic. This KiCad MCP Pro tool supports production EDA automation workflows for
+sch_annotate - Renumber schematic references sequentially. This KiCad MCP Pro tool supports production EDA automation workflo
+sch_auto_place_symbols - Place selected references with a deterministic cluster, linear, star, or grid layout.
+sch_autoplace_fields - Reposition symbol Reference/Value text onto the clearest body side.
+sch_fix_readability - Iteratively fix schematic readability defects until clean or stable.
+sch_auto_place_functional - Place schematic symbols into semantically meaningful zones on the sheet.
+variant_list - List available design variants and basic component counts. This KiCad MCP Pro tool supports production EDA aut
+variant_create - Create a new design variant, optionally cloning an existing variant.
+variant_set_active - Set the active design variant for the current project. This KiCad MCP Pro tool supports production EDA automat
+variant_set_component_override - Override component population, value, or footprint in a variant. This KiCad MCP Pro tool supports production E
+variant_diff_bom - Diff the effective BOM between two design variants. This KiCad MCP Pro tool supports production EDA automation
+variant_export_bom - Export a variant-specific BOM into the project output directory.
+variant_clone - Clone an existing design variant under a new name.
+variant_delete - Delete a design variant.
+variant_get_component_status - Get the effective status of a single component in a variant.
+variant_export_schematic - Export a variant-specific schematic PDF with overrides applied.
+variant_export_manufacturing_package - Export a manufacturing package for a specific variant.
+sch_visual_qa - Run headless visual/readability QA on the active schematic sheet(s).
+sch_cosmetic_score - Score the active schematic's cosmetic quality on a 0-100 scale.
+sch_align_to_grid - Snap off-grid symbols, labels, wires, and junctions onto the drawing grid.
+sch_straighten_wires - Straighten almost-orthogonal wire segments onto the horizontal/vertical axis.
+sch_resolve_label_overlaps - Flip the justify of overlapping labels so their text stops colliding.
+sch_normalize_power_orientation - Upright sideways power/ground symbols, rotating about the pin to keep the net.
+sch_normalize_text_sizes - Normalise outlier font sizes onto the sheet's dominant size.
+sch_visual_baseline_set - Capture the current render of a schematic sheet as its visual baseline.
+sch_visual_baseline_compare - Compare a sheet's current render against its stored visual baseline.
+sch_plan_from_spec - Create a stored schematic change plan from a JSON spec (no write).
+sch_preview_plan - Return the object changes a plan would make, without writing anything.
+sch_apply_plan - Checkpoint the schematic, then apply the plan's net labels.
+sch_verify_plan - Verify an applied plan against the schematic; report ERC availability.
+sch_rollback_plan - Restore the schematic from a plan's checkpoint, undoing the apply.
+lib_list_libraries - List configured symbol and footprint libraries. This KiCad MCP Pro tool supports production EDA automation wor
+lib_search_symbols - Search symbol libraries by name, description, or keywords.
+lib_get_symbol_info - Return details for a single symbol. This KiCad MCP Pro tool supports production EDA automation workflows for M
+lib_search_footprints - Search footprint libraries by footprint name.
+lib_list_footprints - List footprints in a specific library. This KiCad MCP Pro tool supports production EDA automation workflows fo
+lib_rebuild_index - Rebuild the in-memory symbol search index. This KiCad MCP Pro tool supports production EDA automation workflow
+lib_get_footprint_info - Return details for a single footprint. This KiCad MCP Pro tool supports production EDA automation workflows fo
+lib_get_footprint_3d_model - Return the configured 3D model path for a footprint. This KiCad MCP Pro tool supports production EDA automatio
+lib_verify_component_contract - Verify a placed component's symbol, footprint, and pins actually match.
+lib_assign_footprint - Assign a footprint property to a schematic symbol. This KiCad MCP Pro tool supports production EDA automation 
+lib_create_custom_symbol - Create a simple custom symbol in the active project directory.
+lib_get_datasheet_url - Return a datasheet URL from the symbol library when available.
+lib_search_components - Search live component sources for purchasable parts.
+lib_get_component_details - Return live component detail for a specific LCSC code or MPN.
+lib_check_sourcing_policy - Return a structured sourcing policy verdict for one live part.
+lib_assign_lcsc_to_symbol - Assign an LCSC part code to a schematic symbol property.
+lib_get_bom_with_pricing - Generate a live BOM summary with unit and extended pricing.
+lib_check_stock_availability - Check live stock availability by schematic reference or part number.
+lib_find_alternative_parts - Find nearby alternative parts for the supplied LCSC code. This KiCad MCP Pro tool supports production EDA auto
+lib_generate_footprint_ipc7351 - Generate an IPC-7351B compliant KiCad footprint (.kicad_mod) and save it.
+lib_validate_footprint_ipc7351 - Validate a two-terminal chip footprint against its IPC-7351B nominal (hard gate).
+lib_certify_footprint - Certify a footprint against package, documentation, and standard checks (#201).
+lib_check_derating - Check a part choice for reliability derating and approved-vendor (AVL) compliance.
+lib_generate_symbol_from_pintable - Generate a KiCad symbol (.kicad_sym) from a pin table and save it.
+lib_recommend_part - Recommend a purchasable part given electrical requirements.
+lib_bind_part_to_symbol - Assign a live part (LCSC/MPN) to a schematic symbol and optionally its footprint.
+lib_set_3d_model_path - Set or replace the 3D model path on a footprint.
+lib_remove_3d_model - Remove 3D model reference(s) from a footprint.
+lib_bulk_assign_3d_models - Bulk-assign a 3D model to multiple footprints matching a pattern.
+lib_search_3d_models - Search for available 3D model files in the footprint library directory.
+export_gerber - Export Gerber manufacturing files. This KiCad MCP Pro tool supports production EDA automation workflows for MC
+export_drill - Export drill files. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+export_bom - Export a bill of materials. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clien
+export_netlist - Export a KiCad schematic netlist. This KiCad MCP Pro tool supports production EDA automation workflows for MCP
+export_spice_netlist - Export a SPICE netlist. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+export_pcb_pdf - Export the PCB to PDF. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+export_sch_pdf - Export the schematic to PDF. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clie
+export_sch_svg - Export the schematic to SVG when supported. This KiCad MCP Pro tool supports production EDA automation workflo
+export_sch_dxf - Export the schematic to DXF when supported. This KiCad MCP Pro tool supports production EDA automation workflo
+export_sch_python_bom - Export the schematic BOM using KiCad's Python BOM engine. This KiCad MCP Pro tool supports production EDA auto
+export_3d_step - Deprecated alias of ``export_step``; exports a STEP model for the active board.
+export_step - Export a STEP model for the active board. This KiCad MCP Pro tool supports production EDA automation workflows
+export_stepz - Export a STEPZ model for the active board. This KiCad MCP Pro tool supports production EDA automation workflow
+export_xao - Export an XAO model for the active board. This KiCad MCP Pro tool supports production EDA automation workflows
+export_brep - Export BREP format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows 
+export_glb - Export GLB format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows f
+export_gencad - Export GenCAD format for the active board. This KiCad MCP Pro tool supports production EDA automation workflow
+export_ipc_d356 - Export IPC-D-356 format for the active board. This KiCad MCP Pro tool supports production EDA automation workf
+export_ply - Export PLY format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows f
+export_stl - Export STL format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows f
+export_u3d - Export U3D format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows f
+export_vrml - Export VRML format for the active board. This KiCad MCP Pro tool supports production EDA automation workflows 
+export_ps - Export PostScript format for the active board. This KiCad MCP Pro tool supports production EDA automation work
+pcb_export_3d_pdf - Export the PCB to a 3D PDF.
+export_3d_render - Render a 3D view of the active PCB board to a PNG image.
+export_pick_and_place - Export pick and place (CPL) data for the active PCB.
+export_ipc2581 - Export the active PCB to IPC-2581 format. This KiCad MCP Pro tool supports production EDA automation workflows
+export_odb - Export the active PCB to ODB++ format. This KiCad MCP Pro tool supports production EDA automation workflows fo
+export_svg - Export a board layer to SVG when supported. This KiCad MCP Pro tool supports production EDA automation workflo
+export_dxf - Export a board layer to DXF when supported. This KiCad MCP Pro tool supports production EDA automation workflo
+get_board_stats - Export board statistics and return a readable preview. This KiCad MCP Pro tool supports production EDA automat
+export_manufacturing_package - Generate the gated manufacturing release package. This KiCad MCP Pro tool supports production EDA automation w
+pcb_export_stats - Export board statistics (net count, component count, layer count, etc.)
+drc_list_rules - List known DRC rules from the active ``.kicad_dru`` file. This KiCad MCP Pro tool supports production EDA auto
+drc_check_rule_conflicts - Report conflicting or unsatisfiable rules in the active ``.kicad_dru``.
+drc_rule_create - Create or update a custom DRC rule in the active ``.kicad_dru`` file.
+drc_rule_delete - Delete a custom DRC rule from the active rules file.
+drc_rule_enable - Enable or disable a custom DRC rule. This KiCad MCP Pro tool supports production EDA automation workflows for 
+drc_export_rules - Export the active custom DRC rules file for sharing or CI.
+run_erc - Run schematic electrical rule checks. This KiCad MCP Pro tool supports production EDA automation workflows for
+schematic_quality_gate - Evaluate whether the schematic is clean enough to proceed. This KiCad MCP Pro tool supports production EDA aut
+schematic_connectivity_gate - Evaluate whether schematic structure and hierarchy look electrically meaningful. This KiCad MCP Pro tool suppo
+schematic_design_rule_check - Check the schematic against professional electrical-design rules (advisory).
+run_drc - Return full DRC report with PCB violations, unconnected items, and courtyard issues.
+validate_design - Run DRC and ERC and summarize readiness. This KiCad MCP Pro tool supports production EDA automation workflows 
+pcb_quality_gate - Evaluate whether the PCB is physically clean enough to proceed.
+pcb_placement_quality_gate - Evaluate whether footprint placement is overlap-free and inside the board frame.
+pcb_placement_quality_report - Return a structured placement-quality report for capable MCP clients.
+pcb_transfer_quality_gate - Evaluate whether named schematic pad nets transferred cleanly onto PCB pads.
+pcb_stackup_consistency_gate - Validate board layer table and stackup copper layer consistency. This KiCad MCP Pro tool supports production E
+pcb_route_corner_style_gate - Check whether routed tracks still contain non-professional 90-degree corners.
+project_professional_release_gate - Run the professional release gate bundle before manufacturing handoff. This KiCad MCP Pro tool supports produc
+pcb_score_placement - Score PCB placement quality and explain both hard failures and softer warnings.
+manufacturing_quality_gate - Evaluate manufacturing readiness against the active or requested DFM profile.
+project_quality_gate - Run the full project quality gate across schematic, PCB, DFM, and parity checks.
+project_quality_gate_report - Return the full project gate in structured form for capable MCP clients.
+project_signoff_report - Produce the single manufacturing sign-off report.
+project_release_readiness - Assemble a release-readiness evidence bundle for human manufacturing review.
+check_design_for_manufacture - Run a lightweight DFM check using available DRC data. This KiCad MCP Pro tool supports production EDA automati
+get_unconnected_nets - Return only unconnected DRC issues for focused follow-up after run_drc.
+get_courtyard_violations - Return only courtyard DRC issues for focused follow-up after run_drc.
+get_silk_to_pad_violations - Return silkscreen overlap issues from DRC. This KiCad MCP Pro tool supports production EDA automation workflow
+validate_footprints_vs_schematic - Compare PCB footprint references against the schematic symbol references. This KiCad MCP Pro tool supports pro
+drc_list_exclusions - List all DRC violation exclusions stored for the active project.
+drc_add_exclusion - Add DRC exclusions for the current violation set.
+drc_remove_exclusion - Remove a single DRC exclusion by its violation UUID.
+drc_validate_exclusions - Validate that stored DRC exclusions still cover active violations.
+erc_list_rules - List known ERC rules and their current severity levels.
+erc_set_rule_severity - Override the severity of an ERC rule.
+erc_reset_rules - Reset one or all ERC rule severities back to their default (``error``).
+dfm_load_manufacturer_profile - Load a bundled manufacturer DFM profile for subsequent checks. This KiCad MCP Pro tool supports production EDA
+dfm_run_manufacturer_check - Run a manufacturer-aware DFM review using the active bundled profile.
+dfm_calculate_manufacturing_cost - Estimate fabrication cost from board area, layers, and via count.
+route_export_dsn - Export a Specctra DSN for FreeRouting; may require a one-time KiCad GUI step.
+route_import_ses - Stage a routed Specctra SES and surface the required KiCad GUI import step.
+route_apply_ses - Apply a routed Specctra SES to the active board headlessly -- no GUI step.
+route_autoroute_freerouting - Run FreeRouting after placement, then surface the KiCad import step.
+route_set_net_class_rules - Write net-class routing constraints into the active .kicad_dru file.
+route_differential_pair - Write differential-pair routing constraints for a pair of nets.
+route_tune_length - Write a length-tuning rule and report the current delta for a net.
+route_create_tuning_profile - Create or update a KiCad 10-style time-domain tuning profile.
+route_list_tuning_profiles - List configured time-domain tuning profiles. This KiCad MCP Pro tool supports production EDA automation workfl
+route_apply_tuning_profile - Assign a named tuning profile to a net or wildcard net group.
+route_tune_time_domain - Create a time-domain tuning rule for one concrete net; wildcards are rejected.
+tune_diff_pair_length - Write matched-length rules for both nets in a differential pair.
+generate_board_constraints - Generate .kicad_dru rules and net-class constraints from the project design intent.
+pdn_calculate_voltage_drop - Estimate DC voltage drop, trace resistance, and IPC-2221 current-density fusing.
+check_power_integrity - Run a lightweight PDN mesh voltage-drop check for a power net.
+pdn_recommend_decoupling_caps - Recommend local and bulk decoupling from a simple PDN heuristic.
+pdn_check_copper_weight - Check whether the routed copper for a net looks sufficient for the load current.
+pdn_generate_power_plane - Generate a rectangular copper plane on the requested copper layer.
+thermal_calculate_via_count - Estimate thermal via count from package heat and board thermal resistance.
+thermal_check_copper_pour - Check whether the board already has copper pour support for the net.
+thermal_simulate_plane_spreading - Solve copper-plane heat spreading with a 2-D finite-difference thermal solver.
+emc_check_ground_plane_voids - Review GND plane presence and a simple void-risk proxy.
+emc_check_return_path_continuity - Check EMC return-path continuity for a signal or all critical high-speed nets.
+emc_check_split_plane_crossing - Warn when routed signals share layers with split non-ground planes.
+emc_check_decoupling_placement - Review whether ICs have nearby decoupling capacitors. This KiCad MCP Pro tool supports production EDA automati
+emc_check_via_stitching - Estimate via-stitching density from existing ground vias. This KiCad MCP Pro tool supports production EDA auto
+emc_check_differential_pair_symmetry - Review diff-pair skew and width symmetry. This KiCad MCP Pro tool supports production EDA automation workflows
+emc_check_high_speed_routing_rules - Review a high-speed net class for a short-stub proxy.
+emc_run_full_compliance - Run a lightweight EMC sweep with at least ten heuristic checks.
+si_get_solver_capabilities - Report configured solver-grade analysis capabilities and unavailable seams. This KiCad MCP Pro tool supports p
+si_calculate_trace_impedance - Estimate PCB trace impedance using quasi-static interconnect formulas. This KiCad MCP Pro tool supports produc
+si_calculate_trace_width_for_impedance - Solve for a trace width that meets the requested impedance target.
+si_check_differential_pair_skew - Estimate differential-pair length skew and delay mismatch from board tracks.
+si_validate_length_matching - Validate that each net group is matched within the supplied tolerance.
+si_analyze_high_speed_channel - Estimate high-speed channel insertion loss and eye opening for a lossy trace.
+si_generate_stackup - Generate a practical board stackup recommendation and target trace geometry.
+si_check_via_stub - Estimate via-stub resonance and risk for selected vias on the active board.
+si_calculate_decoupling_placement - Estimate decoupling placement quality around an IC power pin. This KiCad MCP Pro tool supports production EDA 
+si_list_dielectric_materials - List all built-in dielectric materials with Er, loss tangent, and frequency range.
+si_synthesize_stackup_for_interfaces - Synthesise a PCB stackup that meets the impedance requirements of the given interfaces.
+si_bind_interfaces_to_net_classes - Map interface specs from the project design intent to KiCad net classes.
+sim_add_spice_directive - Persist a SPICE directive used by future MCP simulation runs.
+sim_run_operating_point - Run a DC operating-point analysis. This KiCad MCP Pro tool supports production EDA automation workflows for MC
+sim_run_ac_analysis - Run a small-signal AC sweep. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clie
+sim_run_transient - Run a transient time-domain simulation. This KiCad MCP Pro tool supports production EDA automation workflows f
+sim_run_dc_sweep - Run a DC sweep for an independent source. This KiCad MCP Pro tool supports production EDA automation workflows
+sim_check_stability - Estimate loop crossover and phase margin from an AC sweep.
+sim_assign_spice_model - Assign SPICE model properties to a component in the active schematic.
+sim_list_spice_libraries - List SPICE model libraries registered in the active project. This KiCad MCP Pro tool supports production EDA a
+sim_add_spice_library - Register a SPICE model library in the active project file.
+sim_remove_spice_library - Unregister a SPICE model library from the active project file.
+sim_validate_spice_setup - Check that registered SPICE libraries are resolvable from the project
+vcs_init_git - Initialize a Git repository for the KiCad project directory. This KiCad MCP Pro tool supports production EDA a
+vcs_commit_checkpoint - Commit the current project state as a named checkpoint. This KiCad MCP Pro tool supports production EDA automa
+vcs_list_checkpoints - List checkpoint commits created by the MCP tool. This KiCad MCP Pro tool supports production EDA automation wo
+vcs_restore_checkpoint - Restore project files and keep a recovery branch for the stashed pre-restore state.
+vcs_diff_with_checkpoint - Show the current project diff versus a checkpoint commit. This KiCad MCP Pro tool supports production EDA auto
+vcs_tag_release - Create an annotated release tag after the full project quality gate passes.
+mfg_panelize - Panelize the active PCB using KiKit.
+mfg_generate_test_plan - Generate a bring-up test plan from the project design intent.
+mfg_generate_release_manifest - Generate a SHA256-signed release manifest for the manufacturing package.
+mfg_correct_cpl_rotations - Apply JLCPCB CPL rotation corrections to a KiCad-exported pick-and-place CSV.
+mfg_check_import_support - Report whether the detected KiCad CLI advertises a given board-import format.
+mfg_import_allegro - Import an Allegro board into a KiCad project directory. This KiCad MCP Pro tool supports production EDA automa
+mfg_import_pads - Import a PADS PCB into a KiCad project directory. This KiCad MCP Pro tool supports production EDA automation w
+mfg_import_geda - Import a gEDA PCB into a KiCad project directory. This KiCad MCP Pro tool supports production EDA automation w
+mfg_import_specctra - Import a Specctra DSN/SES file into a KiCad project directory.
+mfg_create_release_evidence - Generate a machine-readable manufacturing release evidence bundle.
+fp_export - Export a KiCad footprint to an interchange format.
+fp_export_svg - Export a footprint or footprint library to SVG format.
+fp_upgrade - Upgrade a KiCad footprint library file to the current file format.
+fp_get_info - Return metadata about the active board's footprint library.
+jobset_list_templates - List available KiCad jobset templates.
+jobset_export - Run a KiCad jobset to produce multiple export artifacts at once.
+jobset_run - Run a KiCad jobset file against a project.
+jobset_validate - Validate a KiCad jobset file's basic JSON structure.
+sym_export - Export a KiCad symbol to an interchange format.
+sym_export_svg - Export a symbol or symbol library to SVG format.
+sym_upgrade - Upgrade a KiCad symbol library file to the current file format.
+sch_upgrade - Upgrade a schematic file to the current KiCad file format.
+pcb_upgrade - Upgrade a PCB file to the current KiCad file format.
+kicad_get_server_info - Return versioned server information and capability diagnostics for clients. This KiCad MCP Pro tool supports p
+studio_push_context - Update the active IDE context pushed by KiCad Studio. This KiCad MCP Pro tool supports production EDA automati

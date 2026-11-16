@@ -1,0 +1,543 @@
+(kicad_sch
+	(version 20260206)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "24764055-1485-53ba-b67a-451176c35497")
+	(paper "A2")
+	(title_block
+		(title "NIGHTHAWK 05_RF_MONITOR")
+		(date "2026-11-07")
+		(rev "A")
+		(comment 1 "NIGHTHAWK ESL SECURITY RESEARCH")
+		(comment 2 "Generated from Hardware/build/design.py")
+	)
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+(symbol
+	(lib_id "Device:R")
+	(at 44.45 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "73aab69f-b427-53a5-8197-9f86a5486df3")
+	(property "Reference" "R13" (at 44.45 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "10k" (at 44.45 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 44.45 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C25804.html" (at 44.45 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C25804" (at 44.45 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "0603WAF1002T5E" (at 44.45 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "UNI-ROYAL" (at 44.45 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "5f04b7dc-9795-56c4-8be8-9e529636109c"))
+	(pin "2" (uuid "757750f8-4e13-52ac-9cbf-6f0acad918c4"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/f3f8c239-06fd-560c-9470-1b5baff43940" (reference "R13") (unit 1))))
+)
+(symbol
+	(lib_id "Device:R")
+	(at 85.09 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "7f0f335f-105c-51b4-83f3-a99b93cedbe0")
+	(property "Reference" "R14" (at 85.09 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "1k" (at 85.09 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 85.09 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C21190.html" (at 85.09 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C21190" (at 85.09 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "0603WAF1001T5E" (at 85.09 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "UNI-ROYAL" (at 85.09 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "be7260ba-822b-573a-ae0b-4176ed9f6b4d"))
+	(pin "2" (uuid "e124cfd4-8d9c-531e-95d2-4c0818767f88"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/f3f8c239-06fd-560c-9470-1b5baff43940" (reference "R14") (unit 1))))
+)
+(symbol
+	(lib_id "Device:C")
+	(at 124.46 58.42 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "23a2959e-538c-5440-a7ce-a5b95416120c")
+	(property "Reference" "C13" (at 124.46 65.23 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "100n" (at 124.46 66.83 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 124.46 68.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "https://www.lcsc.com/product-detail/C108079.html" (at 124.46 70.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C108079" (at 124.46 71.63 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "CC0603KRX7R7BB104" (at 124.46 73.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "YAGEO" (at 124.46 74.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "88c13776-63f9-5182-9ff6-f14d240fc5e4"))
+	(pin "2" (uuid "1a86a04a-e670-58a3-8ec8-a4861814fb02"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/f3f8c239-06fd-560c-9470-1b5baff43940" (reference "C13") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 165.10 54.61 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "9ed28098-a462-509f-9aac-8078d6967378")
+	(property "Reference" "TP8" (at 165.10 57.61 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_RSSI_IN" (at 165.10 59.21 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 165.10 60.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 165.10 62.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 165.10 64.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 165.10 65.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 165.10 67.21 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "bbd34422-35ba-56c3-bdcb-509010c92b59"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/f3f8c239-06fd-560c-9470-1b5baff43940" (reference "TP8") (unit 1))))
+)
+(symbol
+	(lib_id "Connector:TestPoint")
+	(at 204.47 54.61 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "930582cb-29c3-51d3-9d4a-3ffd7f3afe61")
+	(property "Reference" "TP9" (at 204.47 57.61 0) (effects (font (size 1.27 1.27))))
+	(property "Value" "TP_RSSI" (at 204.47 59.21 0) (effects (font (size 1.27 1.27))))
+	(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 204.47 60.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Datasheet" "" (at 204.47 62.41 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "" (at 204.47 64.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "" (at 204.47 65.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "" (at 204.47 67.21 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(pin "1" (uuid "78d26a69-a6f2-538b-bf3f-38aac19921f7"))
+	(instances (project "NIGHTHAWK" (path "/868b3c51-9750-5b54-afaa-fb87e5944a22/f3f8c239-06fd-560c-9470-1b5baff43940" (reference "TP9") (unit 1))))
+)
+(global_label "RSSI_IN" (shape bidirectional) (at 44.45 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "49dbcdb7-f61e-5032-826d-0df531735f7a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 44.45 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2206e570-e906-553d-9aaa-1da6bf4c56c1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 44.45 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RSSI_IN" (shape bidirectional) (at 85.09 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8174449d-4cef-5cbf-801a-57c31e9abf26") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RSSI" (shape bidirectional) (at 85.09 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a5ad80bd-7ab2-583f-b7b5-be7cb9077da5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 85.09 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RSSI" (shape bidirectional) (at 124.46 54.61 90) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "02283b3f-79fc-5d42-9d5e-c11705faa93a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.46 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape bidirectional) (at 124.46 62.23 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "07ce5bce-4869-5d82-8eed-34568b5e1527") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 124.46 62.23 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RSSI_IN" (shape bidirectional) (at 165.10 54.61 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "02727c39-bc76-57d8-bb9e-4c08f34fc9a3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 165.10 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "RSSI" (shape bidirectional) (at 204.47 54.61 270) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6aba7361-7aef-5f01-b1a6-e19b95c97700") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 204.47 54.61 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(embedded_fonts no)
+)

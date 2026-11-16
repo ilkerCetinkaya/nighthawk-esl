@@ -1,0 +1,9 @@
+schematic references: 102  pcb references (excluding mounting holes): 102
+in schematic only: []
+in pcb only: []
+BOM designators: 87  CPL designators: 87  expected assembly parts: 87
+expected but missing in BOM: []
+expected but missing in CPL: []
+in BOM but not CPL: []
+in CPL but not BOM: []
+RESULT: PASS

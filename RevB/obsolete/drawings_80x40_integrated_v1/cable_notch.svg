@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" font-family="Helvetica,Arial,sans-serif">
+<rect width="1100" height="760" fill="#fff"/>
+<text x="30" y="30" font-size="17" font-weight="bold">Battery cable notch (Edge.Cuts) - detail, scale 40 px/mm</text>
+<path d="M 120 470 L 240.0 470 A 40.0 40.0 0 0 0 280.0 430.0 L 280.0 390.0 A 40.0 40.0 0 0 1 320.0 350.0 L 400.0 350.0 A 40.0 40.0 0 0 1 440.0 390.0 L 440.0 430.0 A 40.0 40.0 0 0 0 480.0 470 L 640 470 L 640 110 L 120 110 Z" fill="#e8f0e3" stroke="#1b5e20" stroke-width="3"/>
+<rect x="240" y="310" width="240" height="160" fill="none" stroke="#d62728" stroke-dasharray="6 4" stroke-width="2"/>
+<text x="360" y="302" font-size="13" fill="#d62728" text-anchor="middle">copper / via / part keepout 1.0 mm around the notch</text>
+<circle cx="334.00000000000006" cy="422.0" r="26.0" fill="#444" stroke="#000"/>
+<circle cx="385.99999999999994" cy="422.0" r="26.0" fill="#444" stroke="#000"/>
+<text x="360" y="510.0" font-size="13" text-anchor="middle">2 x AWG26 UL1007 assumed, OD 1.3 mm each (pair 2.6 x 1.3 mm)</text>
+<line x1="280.0" y1="290.0" x2="440.0" y2="290.0" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="360.0" y="282.0" font-size="13" fill="#1f77b4" text-anchor="middle">4.0 mm (2.6 cable + 2 x 0.7 clearance)</text>
+<line x1="480.0" y1="470" x2="480.0" y2="350.0" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="520.0" y="410.0" font-size="13" fill="#1f77b4" text-anchor="middle">3.0 mm</text>
+<text x="500.0" y="380.0" font-size="13">internal corner radius R1.0 (4x)</text>
+<text x="128.0000000000001" y="134.0" font-size="13">PCB (bottom edge, x 38-42 mm)</text>
+<rect x="140.0" y="110" width="368.0" height="0.0" fill="none"/>
+<text x="30" y="560" font-size="13">Cable route: battery (enclosure, below the PCB) -> through the notch -> JST PH 2-pin SMD connector (top side, 1 mm above the keepout).</text>
+<text x="30" y="584" font-size="13">Edge finish: routed edge; ask the fab for edge deburring; add a heat-shrink sleeve over the pair where it passes the notch.</text>
+<text x="30" y="608" font-size="13">Enclosure: the housing needs a matching 4 x 3 mm (or larger) passage at the same position; no sharp metal near the cable.</text>
+<text x="30" y="632" font-size="13">Assumption to confirm with the actual battery: two AWG26 UL1007 wires (OD 1.3 mm). Thicker leads (e.g. AWG24, OD ~1.5 mm) need a 4.5 mm notch.</text>
+<text x="30" y="656" font-size="13">The notch takes 12 mm2 of the outline and sits >= 20 mm from every antenna keepout.</text>
+</svg>

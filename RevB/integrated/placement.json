@@ -1,0 +1,154 @@
+{
+ "ESP32": {
+  "x": 6.0,
+  "y": 32.0,
+  "w": 14.0,
+  "h": 18.0,
+  "side": "T",
+  "content": "ESP32-C3-WROOM-02-N4 (host MCU, USB, supervisor)"
+ },
+ "USB": {
+  "x": 72.7,
+  "y": 0.0,
+  "w": 7.3,
+  "h": 9.4,
+  "side": "TB",
+  "content": "USB-C TYPE-C-31-M-12 (THT shell legs)"
+ },
+ "USB_ESD": {
+  "x": 65.0,
+  "y": 0.0,
+  "w": 7.2,
+  "h": 6.0,
+  "side": "T",
+  "content": "TPD2E2U06, CC 5.1k x2, PTC, VBUS caps"
+ },
+ "CHG": {
+  "x": 56.0,
+  "y": 0.0,
+  "w": 8.5,
+  "h": 7.5,
+  "side": "T",
+  "content": "BQ24074 linear charger + power path"
+ },
+ "REG": {
+  "x": 44.0,
+  "y": 0.0,
+  "w": 12.0,
+  "h": 10.0,
+  "side": "B",
+  "content": "TPS63802 buck-boost + 0.47uH, 2x TLV755P; shield can"
+ },
+ "STOR": {
+  "x": 8.0,
+  "y": 0.5,
+  "w": 12.0,
+  "h": 8.0,
+  "side": "T",
+  "content": "GD25Q32ESIGR 4 MB SPI NOR"
+ },
+ "IR": {
+  "x": 22.0,
+  "y": 0.5,
+  "w": 12.0,
+  "h": 8.0,
+  "side": "T",
+  "content": "Pricer IR: VSMB10940 LED + MOSFET, VEMD10940F + OPA356 TIA"
+ },
+ "BATT_CONN": {
+  "x": 34.5,
+  "y": 4.0,
+  "w": 9.2,
+  "h": 10.2,
+  "side": "T",
+  "content": "JST PH 2-pin SMD S2B-PH-SM4-TB (battery)"
+ },
+ "NFC_IC": {
+  "x": 21.0,
+  "y": 10.5,
+  "w": 13.0,
+  "h": 16.5,
+  "side": "T",
+  "content": "TRF7970A + 27.12 MHz xtal + matching/EMC filter; shield can"
+ },
+ "COIL": {
+  "x": 21.0,
+  "y": 33.0,
+  "w": 28.0,
+  "h": 16.0,
+  "side": "T",
+  "content": "NFC coil window 28x16, no copper L2-L4, nothing either side"
+ },
+ "RF_SOC": {
+  "x": 50.5,
+  "y": 30.0,
+  "w": 17.5,
+  "h": 12.0,
+  "side": "T",
+  "content": "CC1352R1F3 + 48 MHz/32 kHz xtals + 2.4 GHz and sub-GHz matching; shield can"
+ },
+ "UFL24": {
+  "x": 68.5,
+  "y": 37.0,
+  "w": 3.5,
+  "h": 3.5,
+  "side": "T",
+  "content": "U.FL conducted test port, 2.4 GHz (0R select)"
+ },
+ "UFLSUB": {
+  "x": 64.5,
+  "y": 26.0,
+  "w": 3.5,
+  "h": 3.5,
+  "side": "T",
+  "content": "U.FL conducted test port, sub-GHz (0R select)"
+ },
+ "ANT24": {
+  "x": 64.8,
+  "y": 44.3,
+  "w": 15.2,
+  "h": 5.7,
+  "side": "T",
+  "content": "2.4 GHz PCB IFA per TI AN043 (15.2 x 5.7)"
+ },
+ "SUBANT": {
+  "x": 77.5,
+  "y": 22.0,
+  "w": 2.0,
+  "h": 7.0,
+  "side": "T",
+  "content": "868 MHz chip antenna 0868AT43A0020 (DNP until a sub-GHz target is verified)"
+ },
+ "UI_T": {
+  "x": 36.0,
+  "y": 14.7,
+  "w": 14.0,
+  "h": 9.5,
+  "side": "T",
+  "content": "RESET/BOOT buttons, 4 status LEDs"
+ },
+ "DIG1": {
+  "x": 21.0,
+  "y": 12.0,
+  "w": 21.0,
+  "h": 14.0,
+  "side": "B",
+  "content": "TCA9555 x2 (0x20, 0x21), TPS22918 x3 load switches, pull-ups"
+ },
+ "DIG2": {
+  "x": 6.0,
+  "y": 0.0,
+  "w": 14.0,
+  "h": 21.5,
+  "side": "B",
+  "content": "TPS3823, TPS3431, SN74LVC1G74, SN74LVC1G08 x7 (interlock)"
+ },
+ "UI_B": {
+  "x": 57.0,
+  "y": 0.5,
+  "w": 15.0,
+  "h": 8.0,
+  "side": "B",
+  "content": "interlock JST SH 4, CC1352 cJTAG pads"
+ }
+}

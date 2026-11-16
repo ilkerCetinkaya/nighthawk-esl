@@ -1,0 +1,2335 @@
+[info     ] web_dashboard_routes_registered [kicad_mcp.server] count=31 error=None latency_ms=None mcp_session_id=None request_id=None tool=None ts=2026-11-08T22:04:41.264941Z
+[info     ] startup_diagnostics            [kicad_mcp.server] error=None gate_mode=release-export-only ipc_status=deferred kicad_cli=***REDACTED_PATH*** kicad_version=deferred latency_ms=None mcp_session_id=None operating_mode=experimental profile=builder project_dir=***REDACTED_PATH*** request_id=None tool=None ts=2026-11-08T22:04:41.265099Z
+[info     ] starting_kicad_mcp_pro         [kicad_mcp.server] error=None latency_ms=None mcp_session_id=None operating_mode=experimental profile=builder request_id=None tool=None transport=stdio ts=2026-11-08T22:04:41.265250Z version=4.9.0
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:04:41.273603Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:05:11.276202Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=30007.365 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:05:11.280380Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:05:41.299778Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:06:11.301373Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=30003.333 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:06:11.302430Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:06:41.318073Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:06:43.538309Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2221.27 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:06:43.539107Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:08:17.282322Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:08:17.286140Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=4.944 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:08:17.286856Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:08:47.307898Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:08:47.310387Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=3.101 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:08:47.310841Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:09:17.324985Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:09:17.327091Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2.519 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:09:17.327474Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:09:47.349989Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:09:47.353470Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=4.393 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:09:47.353930Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:10:17.369638Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:10:17.371931Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2.773 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:10:17.372364Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:10:47.391319Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:10:47.393325Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2.633 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:10:47.393800Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:11:17.427112Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:11:17.430285Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=3.991 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:11:17.430733Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:11:47.448541Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:11:47.451047Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2.949 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:11:47.451425Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:12:17.468759Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:12:17.470905Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=2.593 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:12:17.471324Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:12:47.495013Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:12:47.496258Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=1.637 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:12:47.496463Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.
+[info     ] tool_call_started              [kicad_mcp.server] argument_keys=***REDACTED*** error=None latency_ms=None mcp_session_id=None request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:13:17.524951Z
+[error    ] tool_unexpected_error          [kicad_mcp.server] _exc_info=True error=None error_code=ToolRegistrationTimeoutError latency_ms=None mcp_session_id=None message='Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.' request_id=None tool=route_autoroute_freerouting ts=2026-11-08T22:13:17.526236Z
+[info     ] tool_call_finished             [kicad_mcp.server] error=None error_code=ToolRegistrationTimeoutError latency_ms=1.729 mcp_session_id=None request_id=None status=error tool=route_autoroute_freerouting ts=2026-11-08T22:13:17.526459Z
+Tool 'route_autoroute_freerouting' raised an unexpected exception
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 977, in _ensure_registered_async
+    await asyncio.wait_for(
+    ...<2 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2779, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 964, in ensure_registered
+    raise self._lazy_registration_error
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 1124, in run
+    result = context.run(func, *args)
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 967, in ensure_registered
+    register()
+    ~~~~~~~~^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2370, in register
+    _register_profile_components(server, enabled, cfg)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 2216, in _register_profile_components
+    from .resources import analysis, board_state, server_info, studio_context
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/resources/analysis.py", line 21, in <module>
+    from ..tools.pcb import (
+    ...<3 lines>...
+    )
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/pcb.py", line 134, in <module>
+    from .schematic import _iter_child_sheet_paths, _symbol_property_values, parse_schematic_file
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/tools/schematic.py", line 99, in <module>
+    from . import (
+    ...<17 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1218, in get_data
+TimeoutError: [Errno 60] Operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/mcp/server/mcpserver/server.py", line 442, in _handle_call_tool
+    return await self.call_tool(params.name, params.arguments or {}, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 1340, in call_tool
+    await self._ensure_registered_async()
+  File "/Users/ilkercetinkaya/Desktop/PCB_design_claude/NIGHTHAWK_ESL/RevB/ai_routing/.venv/lib/python3.13/site-packages/kicad_mcp/server.py", line 984, in _ensure_registered_async
+    raise ToolRegistrationTimeoutError(
+    ...<3 lines>...
+    ) from exc
+kicad_mcp.errors.ToolRegistrationTimeoutError: Tool registration has not finished yet and exceeded its 30s budget. It continues in the background — retry shortly.

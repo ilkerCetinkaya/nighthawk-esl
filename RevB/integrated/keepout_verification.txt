@@ -1,0 +1,20 @@
+Keepout verification (KiCad zone fill, pads, tracks/vias); areas in mm^2 of filled copper inside each keepout
+  ESP32 cut-out (air)                    F.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  ESP32 cut-out (air)                    In1.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  ESP32 cut-out (air)                    In2.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  ESP32 cut-out (air)                    B.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  2.4 GHz IFA L2-L4 (from y 44.8)        In1.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  2.4 GHz IFA L2-L4 (from y 44.8)        In2.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  2.4 GHz IFA L2-L4 (from y 44.8)        B.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  2.4 GHz IFA F.Cu box                   F.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  868 MHz corner zone (all layers)       F.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  868 MHz corner zone (all layers)       In1.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  868 MHz corner zone (all layers)       In2.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  868 MHz corner zone (all layers)       B.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  NFC coil window L2, L3                 In1.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  NFC coil window L2, L3                 In2.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  NFC coil window B.Cu (footprints)      B.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  cable notch keepout (all layers)       F.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  cable notch keepout (all layers)       In1.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  cable notch keepout (all layers)       In2.Cu foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2
+  cable notch keepout (all layers)       B.Cu   foreign pads/tracks:  0 []  zone fill inside: 0.000 mm2

@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "NH_REVB")(type "KiCad")(uri "${KIPRJMOD}/NH_REVB.pretty")(options "")(descr "NIGHTHAWK REV B local footprints"))
+)

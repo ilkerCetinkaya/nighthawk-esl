@@ -1,0 +1,98 @@
+97 tools
+kicad_list_tool_categories - List all available tool categories and capabilities. This KiCad MCP Pro tool supports production EDA automatio
+kicad_get_tools_in_category - Get tool names in a category, optionally filtered by maturity.
+kicad_set_project - Set the active KiCad project directory and file paths. This KiCad MCP Pro tool supports production EDA automat
+kicad_get_project_info - Show the currently configured KiCad project paths. This KiCad MCP Pro tool supports production EDA automation 
+project_design_workflow - Return the professional PCB design workflow as a typed phase state machine.
+project_set_design_intent - Persist high-level project design intent and structural group constraints.
+project_import_design_spec - Import structured product/spec text into ProjectDesignIntent conservatively.
+project_get_design_intent - Show the persisted project design intent used by placement and release gates.
+project_get_design_spec - Return the resolved project design spec with explicit and inferred fields.
+project_infer_design_spec - Infer a design spec from the active PCB without writing it to disk.
+project_validate_design_spec - Validate the resolved design spec against the active project PCB.
+project_generate_design_prompt - Generate a professional workflow prompt tailored to the resolved project spec.
+project_assess_edit_impact - Scope re-validation after an edit: semantic-diff the design intent and report
+project_revalidate_after_edit - Re-run only the gates an edit could have invalidated; prove the rest preserved.
+project_get_next_action - Return the next high-priority action derived from the current project gate.
+project_auto_fix_loop - Run the project quality gate and automatically apply server-side fixes.
+project_full_validation_loop - Run ERC/DRC/project gates in a bounded fix-and-rerun validation loop.
+project_gate_trend - Return persisted quality-gate trend history for one gate. This KiCad MCP Pro tool supports production EDA auto
+project_design_report - Generate a comprehensive design-status report.
+kicad_list_recent_projects - List recently opened KiCad projects from KiCad's config files. This KiCad MCP Pro tool supports production EDA
+kicad_scan_directory - Scan a directory and report any KiCad project files it contains.
+kicad_create_new_project - Create a new minimal KiCad project structure and activate it.
+kicad_get_version - Get KiCad version information and current connection status. This KiCad MCP Pro tool supports production EDA a
+kicad_help - Show a concise startup guide and all tool categories. This KiCad MCP Pro tool supports production EDA automati
+kicad_capability_parity - Report how much of KiCad's programmatic surface this server can drive.
+project_list_embedded_files - List all embedded (project-embedded) files in the active project.
+project_embed_file - Embed an external file into the KiCad project as project metadata.
+project_extract_embedded_file - Extract an embedded file from the project and write it to disk.
+project_remove_embedded_file - Remove an embedded file entry from the project metadata.
+pcb_get_board_summary - Summarize the current board. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clie
+pcb_get_vias - List board vias. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_footprints - List board footprints. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_footprint_layers - List every layer referenced by a footprint block, including inner layers.
+pcb_visual_qa - Headless PCB readability QA: off-board parts, silk and body overlap.
+pcb_get_nets - List all board nets. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients.
+pcb_get_layers - List enabled board layers. This KiCad MCP Pro tool supports production EDA automation workflows for MCP client
+pcb_get_stackup - Show the current stackup. This KiCad MCP Pro tool supports production EDA automation workflows for MCP clients
+pcb_get_impedance_for_trace - Estimate trace impedance for the supplied width on the named stackup layer.
+pcb_check_creepage_clearance - Run a heuristic creepage clearance review against pad spacing. This KiCad MCP Pro tool supports production EDA
+pcb_get_selection - List currently selected items in the PCB editor. This KiCad MCP Pro tool supports production EDA automation wo
+pcb_get_board_as_string - Return the current board as a bounded S-expression string.
+pcb_get_ratsnest - Report currently unconnected board items using the latest DRC view.
+pcb_get_design_rules - Read the active board design rules file when available. This KiCad MCP Pro tool supports production EDA automa
+pcb_block_list - List stored PCB design blocks created from selected footprints. This KiCad MCP Pro tool supports production ED
+pcb_get_live_edit_state - Return sanitized native-live PCB transaction state as deterministic JSON.
+pcb_get_groups - List board groups (KiCad 10.0.0+).
+pcb_get_origin - Get the current board origin (drill origin) in millimeters.
+pcb_critique_placement - Analyse PCB component placement for common design-quality issues.
+pcb_get_net_statistics - Return statistical data about all nets in the active PCB.
+pcb_net_inspector - Inspect every detail about a specific net in the PCB.
+pcb_add_test_point - Register a test-point assignment for a net.
+pcb_list_test_points - List all registered test points for the active project. This KiCad MCP Pro tool supports production EDA automa
+pcb_optimize_test_point_placement - Suggest optimal positions for test points on each registered net.
+pcb_check_test_coverage - Calculate test-point coverage: how many nets have test points assigned.
+drc_list_rules - List known DRC rules from the active ``.kicad_dru`` file. This KiCad MCP Pro tool supports production EDA auto
+drc_check_rule_conflicts - Report conflicting or unsatisfiable rules in the active ``.kicad_dru``.
+drc_rule_create - Create or update a custom DRC rule in the active ``.kicad_dru`` file.
+drc_rule_delete - Delete a custom DRC rule from the active rules file.
+drc_rule_enable - Enable or disable a custom DRC rule. This KiCad MCP Pro tool supports production EDA automation workflows for 
+drc_export_rules - Export the active custom DRC rules file for sharing or CI.
+run_erc - Run schematic electrical rule checks. This KiCad MCP Pro tool supports production EDA automation workflows for
+schematic_quality_gate - Evaluate whether the schematic is clean enough to proceed. This KiCad MCP Pro tool supports production EDA aut
+schematic_connectivity_gate - Evaluate whether schematic structure and hierarchy look electrically meaningful. This KiCad MCP Pro tool suppo
+schematic_design_rule_check - Check the schematic against professional electrical-design rules (advisory).
+run_drc - Return full DRC report with PCB violations, unconnected items, and courtyard issues.
+validate_design - Run DRC and ERC and summarize readiness. This KiCad MCP Pro tool supports production EDA automation workflows 
+pcb_quality_gate - Evaluate whether the PCB is physically clean enough to proceed.
+pcb_placement_quality_gate - Evaluate whether footprint placement is overlap-free and inside the board frame.
+pcb_placement_quality_report - Return a structured placement-quality report for capable MCP clients.
+pcb_transfer_quality_gate - Evaluate whether named schematic pad nets transferred cleanly onto PCB pads.
+pcb_stackup_consistency_gate - Validate board layer table and stackup copper layer consistency. This KiCad MCP Pro tool supports production E
+pcb_route_corner_style_gate - Check whether routed tracks still contain non-professional 90-degree corners.
+project_professional_release_gate - Run the professional release gate bundle before manufacturing handoff. This KiCad MCP Pro tool supports produc
+pcb_score_placement - Score PCB placement quality and explain both hard failures and softer warnings.
+project_quality_gate - Run the full project quality gate across schematic, PCB, DFM, and parity checks.
+project_quality_gate_report - Return the full project gate in structured form for capable MCP clients.
+project_signoff_report - Produce the single manufacturing sign-off report.
+project_release_readiness - Assemble a release-readiness evidence bundle for human manufacturing review.
+get_unconnected_nets - Return only unconnected DRC issues for focused follow-up after run_drc.
+get_courtyard_violations - Return only courtyard DRC issues for focused follow-up after run_drc.
+get_silk_to_pad_violations - Return silkscreen overlap issues from DRC. This KiCad MCP Pro tool supports production EDA automation workflow
+validate_footprints_vs_schematic - Compare PCB footprint references against the schematic symbol references. This KiCad MCP Pro tool supports pro
+drc_list_exclusions - List all DRC violation exclusions stored for the active project.
+drc_add_exclusion - Add DRC exclusions for the current violation set.
+drc_remove_exclusion - Remove a single DRC exclusion by its violation UUID.
+drc_validate_exclusions - Validate that stored DRC exclusions still cover active violations.
+erc_list_rules - List known ERC rules and their current severity levels.
+erc_set_rule_severity - Override the severity of an ERC rule.
+erc_reset_rules - Reset one or all ERC rule severities back to their default (``error``).
+vcs_init_git - Initialize a Git repository for the KiCad project directory. This KiCad MCP Pro tool supports production EDA a
+vcs_commit_checkpoint - Commit the current project state as a named checkpoint. This KiCad MCP Pro tool supports production EDA automa
+vcs_list_checkpoints - List checkpoint commits created by the MCP tool. This KiCad MCP Pro tool supports production EDA automation wo
+vcs_restore_checkpoint - Restore project files and keep a recovery branch for the stashed pre-restore state.
+vcs_diff_with_checkpoint - Show the current project diff versus a checkpoint commit. This KiCad MCP Pro tool supports production EDA auto
+vcs_tag_release - Create an annotated release tag after the full project quality gate passes.
+kicad_get_server_info - Return versioned server information and capability diagnostics for clients. This KiCad MCP Pro tool supports p
+studio_push_context - Update the active IDE context pushed by KiCad Studio. This KiCad MCP Pro tool supports production EDA automati
