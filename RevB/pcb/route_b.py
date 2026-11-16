@@ -95,9 +95,11 @@ def ground_vias(board):
             for code, l, t, r, b in pads:
                 if code != gnd and l - 0.43 <= sx <= r + 0.43 and t - 0.43 <= sy <= b + 0.43:
                     return False
-        for ax, ay, bx, by, hw, code in segs:
-            if code != gnd and seg_dist(vx, vy, ax, ay, bx, by) < hw + 0.225 + 0.2:
-                return False
+        for k in range(0, 7):
+            sx, sy = px + (vx - px) * k / 6.0, py + (vy - py) * k / 6.0
+            for ax, ay, bx, by, hw, code in segs:
+                if code != gnd and seg_dist(sx, sy, ax, ay, bx, by) < hw + 0.225 + 0.2:
+                    return False
         for qx, qy, code in vias + new:
             if math.hypot(vx - qx, vy - qy) < 0.8:
                 return False
@@ -198,7 +200,22 @@ def jar(passes):
     text = open(DSN).read()
     text = strip_blocks(text, ("(place_keepout",))
     text = text.replace('(layer In1.Cu\n      (type signal)', '(layer In1.Cu\n      (type power)')
-    assert '(type power)' in text
+    text = text.replace('(layer In2.Cu\n      (type signal)', '(layer In2.Cu\n      (type power)')
+    assert text.count('(type power)') == 2
+    i0 = text.index("(plane GND")
+    depth = 0
+    i1 = i0
+    while True:
+        if text[i1] == "(":
+            depth += 1
+        elif text[i1] == ")":
+            depth -= 1
+            if depth == 0:
+                i1 += 1
+                break
+        i1 += 1
+    block = text[i0:i1].replace("(plane GND", "(plane 3V3", 1).replace("In1.Cu", "In2.Cu")
+    text = text[:i1] + "\n    " + block + text[i1:]
     open(DSN, "w").write(text)
     if os.path.exists(SES):
         os.remove(SES)
@@ -216,25 +233,4 @@ def finish():
     z.SetNet(board.FindNet("3V3"))
     z.SetMinThickness(mm(0.2))
     z.SetLocalClearance(mm(0.2))
-    z.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL)
-    z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
-    z.SetZoneName("3V3_POUR_L3")
-    o = z.Outline()
-    o.NewOutline()
-    for x, y in ((0.0, 0.0), (m.BW, 0.0), (m.BW, m.BH), (6.0, m.BH), (6.0, m.NOTCH[1]), (0.0, m.NOTCH[1])):
-        p = P(x, y)
-        o.Append(p.x, p.y)
-    board.Add(z)
-    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
-    pcbnew.SaveBoard(PCB, board)
-    print("finished")
-
-
-if __name__ == "__main__":
-    stage = sys.argv[1]
-    if stage == "prep":
-        prep()
-    elif stage == "jar":
-        jar(int(sys.argv[2]) if len(sys.argv) > 2 else 20)
-    elif stage == "finish":
-        finish()
+    z.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL

@@ -30,6 +30,8 @@ SKIP_TP_FP = "TestPoint:TestPoint_Pad_D1.0mm"
 ORIGIN_PLACED = {"J1": (58.0, 0.0, 0), "U1": (13.15, 39.6, 90), "ANT1": (67.85, 44.55, 0), "ANT3": (30.225, 48.875, 0)}
 ORIGIN_RECT = {"J1": (53.3, -0.9, 62.7, 7.9), "U1": (0.0, 29.9, 20.3, 49.3), "ANT1": IFA_BOX, "ANT3": (28.2, 33.0, 48.1, 49.0)}
 
+PLACE_GAP = float(os.environ.get('PLACE_GAP', '0.6'))
+
 RF_RESERVED = [
     (69.9, 22.9, 74.8, 26.7),
     (77.7, 22.9, 78.4, 33.0),
@@ -49,8 +51,26 @@ RF_RESERVED = [
     (58.5, 7.6, 68.3, 8.2),
     (58.5, 7.6, 59.2, 10.9),
 ]
+RF_RESERVED_B_ONLY = [
+    (57.8, 15.0, 59.6, 37.0),
+    (77.8, 15.0, 79.9, 37.0),
+    (57.8, 15.0, 79.9, 16.6),
+    (57.8, 35.4, 79.9, 37.0),
+]
 RF_RESERVED_BOTH = [
     (76.8, 21.6, 77.6, 25.1),
+    (74.20, 23.16, 75.80, 24.76),
+    (73.80, 21.55, 75.40, 23.15),
+    (69.15, 41.17, 70.75, 42.77),
+    (69.15, 38.23, 70.75, 39.83),
+    (72.10, 40.06, 73.70, 41.66),
+    (64.20, 41.60, 65.80, 43.20),
+    (75.44, 26.60, 77.04, 28.20),
+    (76.40, 23.90, 78.00, 25.50),
+    (76.40, 21.20, 78.00, 22.80),
+    (66.60, 8.20, 68.20, 9.80),
+    (66.60, 2.80, 68.20, 4.40),
+    (63.2, 24.2, 68.8, 29.8),
 ]
 
 FIXED = {
@@ -112,6 +132,11 @@ REGIONS = {
     "REG_B": [("B", (9.0, 0.5, 21.0, 10.5)), ("F", (9.0, 0.5, 21.0, 10.5))],
     "UI_F": _both((22.0, 11.0, 30.0, 21.0)) + _both((22.0, 0.5, 34.5, 10.0)),
 }
+TIGHT_REGIONS = ("RF_CAN", "ANT24_PI", "ANT868_PI", "IR_LED", "TP_B2", "NFC_TANK")
+OVERFLOW = [("B", (50.5, 17.0, 76.0, 42.5)), ("F", (49.5, 32.0, 59.5, 42.5)), ("B", (50.0, 43.0, 62.0, 49.0)), ("B", (24.0, 24.0, 33.5, 31.5)), ("B", (35.5, 27.0, 47.0, 31.5))]
+if os.environ.get("USE_OVERFLOW", "1") == "1":
+    for _k in ("FLASH_F", "DIG_B", "IR_F", "NFC_F", "PWR_F", "REG_B", "UI_F"):
+        REGIONS[_k] = REGIONS[_k] + OVERFLOW
 ANCHOR_REGION = {
     "U2": "FLASH_F", "D1": "PWR_F", "F1": "PWR_F", "U3": "PWR_F", "U4": "REG_B", "U5": "REG_B", "U6": "REG_B",
     "Y1": "RF_CAN", "Y2": "RF_CAN", "Y3": "NFC_F", "Q1": "IR_F", "U10": "IR_F", "U11": "IR_F", "U12": "IR_F",
@@ -271,6 +296,8 @@ def build():
     rects = {"F": [], "B": []}
     for i, rr in enumerate(RF_RESERVED):
         rects["F"].append(("RFRES%d" % i, rr))
+    for i, rr in enumerate(RF_RESERVED_B_ONLY):
+        rects["B"].append(("RFRESRING%d" % i, rr))
     for i, rr in enumerate(RF_RESERVED_BOTH):
         rects["F"].append(("RFRESB%d" % i, rr))
         rects["B"].append(("RFRESB%d" % i, rr))
@@ -388,7 +415,8 @@ def build():
                     pass
             cands.sort()
             for _, side, x, y in cands:
-                rect = (x - w / 2, y - h / 2, x + w / 2, y + h / 2)
+                gap_ = 0.0 if rname in TIGHT_REGIONS else (0.2 if p["ref"] in ("U21", "U22") else PLACE_GAP)
+                rect = (x - w / 2 - gap_, y - h / 2 - gap_, x + w / 2 + gap_, y + h / 2 + gap_)
                 sides = ("F", "B") if has_tht(fp) else (side,)
                 if not any(overlap(rect, r) for s_ in sides for _, r in rects[s_]):
                     done = (x, y, rect, rot, side)
@@ -396,6 +424,7 @@ def build():
             if done:
                 break
         if not done:
+            print('DBG fail', p['ref'], rname, 'w,h', round(w,2), round(h,2), 'cands', len(cands), 'regions', [(sd, tuple(round(v,1) for v in rr)) for sd, rr in rlist])
             failures.append((p["ref"], rname, p["fp"].split(":")[-1]))
             board.Remove(fp)
             continue

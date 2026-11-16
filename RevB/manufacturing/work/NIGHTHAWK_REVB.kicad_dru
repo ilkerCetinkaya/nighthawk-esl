@@ -1,0 +1,7 @@
+(version 1)
+(rule "RF_differential_pairs_to_CC1352R_IPC"
+  (condition "A.NetName == 'RF24_P' || A.NetName == 'RF24_N' || A.NetName == 'RFSUB_P' || A.NetName == 'RFSUB_N'")
+  (constraint clearance (min 0.15mm)))
+(rule "IPC_0900PC15A0036_manufacturer_land_pattern"
+  (condition "A.Parent == 'U8' && B.Parent == 'U8'")
+  (constraint clearance (min 0.12mm)))
