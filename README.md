@@ -32,6 +32,9 @@ A bench instrument for studying electronic shelf label (ESL) links on equipment 
 <p align="center"><img src="assets/revb-blocks-top.png" alt="REV B top-side block placement" width="48%"> <img src="assets/revb-blocks-bottom.png" alt="REV B bottom-side block placement" width="48%"></p>
 <p align="center"><img src="assets/revb-rf-zones-keepouts.png" alt="REV B RF zones and antenna keepouts" width="48%"> <img src="assets/revb-antenna-geometry.png" alt="REV B antenna geometry" width="48%"></p>
 
+<p align="center"><img src="assets/revb-3d-render-angle.png" alt="REV B 3D render, angled view" width="48%"> <img src="assets/revb-3d-render-top.png" alt="REV B 3D render, top view" width="48%"></p>
+<p align="center"><em>REV B 3D renders from KiCad (preliminary placement, not routed).</em></p>
+
 ### Engineering approach
 
 Every document labels its evidence: **[DS]** manufacturer datasheet read, **[CALC]** calculation (script included), **[ASM]** assumption, **[MEAS]** measurement (none exist yet). Highlights:
